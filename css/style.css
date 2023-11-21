@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Inter Italic";
+    src: url("../fonts/Inter-Italic.ttf");
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #E1D4C9;
@@ -32,8 +37,9 @@ h3 {
 }
 
 .accent {
-    font-style: italic;
+    font-family: "Inter Italic";
     color: #B0907A;
+    letter-spacing: 0.4px;
 }
 
 .medium {
@@ -111,11 +117,18 @@ a {
 .button-app-store span.text span.caption,
 .button-google-play span.text span.caption {
     display: block;
+    margin: 1px 0;
 }
 
-.button-google-play .text,
 .button-app-store .text {
-    padding-left: 25px;
+    padding-left: 6px;
+    display: inherit;
+    text-align: left;
+    margin: 0;
+}
+
+.button-google-play .text {
+    padding-left: 20px;
     display: inherit;
     text-align: left;
     margin: 0;
@@ -123,8 +136,8 @@ a {
 
 .button-google-play:before {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 13px;
+    left: 19px;
     display: inherit;
     content: '';
     width: 36px;
@@ -139,8 +152,8 @@ a {
 
 .button-app-store:before {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 13px;
+    left: 19px;
     display: inherit;
     content: '';
     width: 36px;
@@ -167,11 +180,17 @@ button {
 }
 
 header {
-    padding: 10px 0;
+    padding: 14px 0 17px;
+}
+
+#logo img {
+    width: 100px;
+    position: relative;
+    top: 5px;
 }
 
 .body-wrapper {
-    max-width: 1440px;
+    max-width: 1360px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 40px;
@@ -196,7 +215,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: cover;
+    background-position: 0;
     padding: 100px;
     border-radius: 40px;
     color: #E1D4C9;
@@ -215,16 +234,103 @@ section {
 }
 
 #favorite-coffee h3 {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 #favorite-coffee .product {
     max-width: 480px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 
 #favorite-coffee .product img {
-    max-width: 480px
+    max-width: 480px;
+    margin-bottom: 11px;
+}
+
+#favorite-coffee .product .text {
+    margin-bottom: 17px;
+    line-height: 24px;
+}
+
+#favorite-coffee .slider {
+    position: relative;
+}
+
+.ms-nav-next {
+    display: flex;
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms-nav-next::before,
+.ms-nav-prev::before {
+    content: '' !important;
+    width: 24px;
+    height: 24px;
+
+}
+
+.ms-nav-next::before {
+    background: url(../icons/arrow-right.svg) center no-repeat;
+}
+
+.ms-nav-prev::before {
+    background: url(../icons/arrow-left.svg) center no-repeat;
+}
+
+.ms-nav-prev {
+    display: flex;
+    left: 0;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    position: absolute;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.ms-nav-next,
+.ms-nav-prev {
+    background: transparent;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+.bullets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bullet {
+    background: #C1B6AD;
+    width: 40px;
+    height: 4px;
+    margin: 0 6px;
+    border-radius: 100px;
+}
+
+.bullet.active {
+    background: #665F55;
+}
+
+#about {
+    margin-bottom: 63px;
 }
 
 #about .gallery {
@@ -249,7 +355,7 @@ section {
     border-radius: 20px;
 }
 
-#about .gallery .gallery-inner {
+#about .gallery-inner:nth-child(1) {
     padding-right: 40px;
 }
 
@@ -268,15 +374,24 @@ section {
 #mobile-app {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    margin-bottom: 93px;
 }
 
 #mobile-app p {
     margin: 0 0 40px 0;
+    line-height: 24px;
+}
+
+#mobile-app>div:nth-child(1) {
+    padding-top: 144px;
 }
 
 #mobile-app .blocks {
     width: 50%;
+}
+
+#mobile-app>div:nth-child(2) {
+    text-align: right;
 }
 
 #mobile-app .promo-text {
@@ -284,7 +399,7 @@ section {
 }
 
 #mobile-app button {
-    margin-right: 20px;
+    margin-right: 15px;
     padding: 0;
 }
 
@@ -292,7 +407,7 @@ section {
     background-color: #665F55;
     color: #E1D4C9;
     border-radius: 40px;
-    padding: 100px;
+    padding: 100px 100px 90px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -317,7 +432,7 @@ footer .footer-contacts ul {
 
 footer .social ul li {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 5px;
 }
 
 footer .social ul li a {
@@ -335,8 +450,12 @@ footer .social ul li a i {
     left: 18px;
 }
 
+#contacts>div:nth-child(2) {
+    padding: 6px 0 0 62px;
+}
+
 footer .footer-contacts ul li {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 footer .footer-contacts ul li i {
@@ -394,7 +513,7 @@ footer .social ul li a i:before {
 }
 
 #menu-link {
-    flex-basis: 75px;
+    flex-basis: 100px;
 }
 
 .coffe-icon {
@@ -405,8 +524,8 @@ footer .social ul li a i:before {
 
 #top-menu ul>li {
     display: inline;
-    padding: 10px 15px;
-    margin: 0 5px;
+    padding: 10px 13px;
+    margin: 0 11px 0 0;
 }
 
 #menu-link {
