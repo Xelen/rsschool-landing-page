@@ -25,6 +25,12 @@ h3 {
     line-height: 125%;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0 0 40px 0;
+}
+
 .accent {
     font-style: italic;
     color: #B0907A;
@@ -53,7 +59,7 @@ button {
     padding: 15px;
     border: 1px solid #E1D4C9;
     border-radius: 100px;
-    color: inherit;
+    color: #403F3D;
     font: inherit;
 }
 
@@ -83,6 +89,7 @@ a {
     text-decoration: none;
 }
 
+
 .button-google-play,
 .button-app-store {
     width: 200px;
@@ -95,14 +102,15 @@ a {
     position: relative;
 }
 
-.button-block p {
-    margin: 0;
-}
-
 #mobile-app .button-google-play:hover,
-.button-app-store:hover {
+#mobile-app .button-app-store:hover {
     background-color: #403F3D;
     color: #E1D4C9;
+}
+
+.button-app-store span.text span.caption,
+.button-google-play span.text span.caption {
+    display: block;
 }
 
 .button-google-play .text,
@@ -166,6 +174,9 @@ header {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
 }
 
 header .inner {
@@ -176,24 +187,202 @@ header .inner {
     align-items: center;
 }
 
-#promo {
+section {
+    margin-bottom: 100px;
+}
+
+#hero {
     background-image: url('../img/img-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: cover;
-    padding: 60px;
+    padding: 100px;
     border-radius: 40px;
-}
-
-#promo h1,
-#promo p {
     color: #E1D4C9;
 }
 
-#promo .promo-text {
+#hero p {
+    margin: 0 0 40px 0;
+}
+
+#hero .promo-text {
     max-width: 530px;
 }
+
+#favorite-coffee {
+    text-align: center;
+}
+
+#favorite-coffee h3 {
+    margin-bottom: 16px;
+}
+
+#favorite-coffee .product {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+#favorite-coffee .product img {
+    max-width: 480px
+}
+
+#about .gallery {
+    display: flex;
+}
+
+#about .gallery .image1,
+#about .gallery .image4 {
+    overflow: hidden;
+    width: 660px;
+    height: 590px;
+}
+
+#about .gallery .image2,
+#about .gallery .image3 {
+    overflow: hidden;
+    width: 660px;
+    height: 430px;
+}
+
+#about .gallery .gallery-inner .image-box {
+    border-radius: 20px;
+}
+
+#about .gallery .gallery-inner {
+    padding-right: 40px;
+}
+
+#about .gallery .gallery-inner .img-wrapper {
+    padding-bottom: 40px;
+}
+
+#about .gallery .gallery-inner .image-box img {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mobile-app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#mobile-app p {
+    margin: 0 0 40px 0;
+}
+
+#mobile-app .blocks {
+    width: 50%;
+}
+
+#mobile-app .promo-text {
+    max-width: 630px;
+}
+
+#mobile-app button {
+    margin-right: 20px;
+    padding: 0;
+}
+
+#contacts {
+    background-color: #665F55;
+    color: #E1D4C9;
+    border-radius: 40px;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contacts .blocks {
+    width: 50%;
+    padding-right: 40px;
+}
+
+footer .social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .social ul li {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+footer .social ul li a {
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    text-align: center;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+footer .social ul li a i {
+    position: relative;
+    top: 18px;
+    left: 18px;
+}
+
+footer .footer-contacts ul li {
+    margin-bottom: 20px;
+}
+
+footer .footer-contacts ul li i {
+    margin-right: 6px;
+}
+
+footer .footer-contacts ul li i:before {
+    display: inline-block;
+    content: '';
+    top: 3px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.address i:before {
+    background: url(../icons/pin-alt.svg) center no-repeat;
+}
+
+.phone i:before {
+    background: url(../icons/phone.svg) center no-repeat;
+}
+
+.hours i:before {
+    background: url(../icons/clock.svg) center no-repeat;
+}
+
+footer .social ul li a i:before {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+}
+
+.twitter a i:before {
+    background: url(../icons/twitter.svg) center no-repeat;
+}
+
+.facebook a i:before {
+    background: url(../icons/facebook.svg) center no-repeat;
+}
+
+.instagram a i:before {
+    background: url(../icons/instagram.svg) center no-repeat;
+}
+
 
 #top-menu {
     flex: 1 0 0;
@@ -205,12 +394,13 @@ header .inner {
 }
 
 #menu-link {
-    flex-basis: 72px;
+    flex-basis: 75px;
 }
 
 .coffe-icon {
     position: relative;
     top: 3px;
+    margin-left: 3px;
 }
 
 #top-menu ul>li {
