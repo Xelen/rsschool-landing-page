@@ -1,0 +1,18 @@
+body {
+    background-color: red;
+}
+
+.wrapper {
+    width: 1440px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#promo {
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: co;
+    padding: 60px;
+}
