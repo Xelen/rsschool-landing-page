@@ -1,18 +1,224 @@
 body {
-    background-color: red;
+    font-family: 'Inter', sans-serif;
+    background-color: #E1D4C9;
+    color: #403F3D;
+    line-height: 1.6666;
+    font-weight: 400;
+    margin: 0;
 }
 
-.wrapper {
-    width: 1440px;
-    background-color: white;
-    margin: 0 auto;
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.accent {
+    font-style: italic;
+    color: #B0907A;
+}
+
+.medium {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button-primary {
+    width: 200px;
+    height: 64px;
+    background-color: #E1D4C9;
+    padding: 15px;
+    border: 1px solid #E1D4C9;
+    border-radius: 100px;
+    color: inherit;
+    font: inherit;
+}
+
+
+.button-primary .coffe-icon {
+    display: none;
+}
+
+.button-primary:hover .coffe-icon {
+    display: inline-block;
+    margin-left: 5px;
+    animation: 1s show ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+a {
+    color: #403F3D;
+    text-decoration: none;
+}
+
+.button-google-play,
+.button-app-store {
+    width: 200px;
+    height: 64px;
+    background-color: transparent;
+    border: 1px solid #403F3D;
+    border-radius: 100px;
+    color: inherit;
+    font: inherit;
+    position: relative;
+}
+
+.button-block p {
+    margin: 0;
+}
+
+#mobile-app .button-google-play:hover,
+.button-app-store:hover {
+    background-color: #403F3D;
+    color: #E1D4C9;
+}
+
+.button-google-play .text,
+.button-app-store .text {
+    padding-left: 25px;
+    display: inherit;
+    text-align: left;
+    margin: 0;
+}
+
+.button-google-play:before {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: inherit;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background: url(../icons/google-play-dark-icon.svg) center no-repeat;
+}
+
+.button-google-play:hover:before {
+    background: url(../icons/google-play-light-icon.svg) center no-repeat;
+
+}
+
+.button-app-store:before {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: inherit;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background: url(../icons/app-store-dark-icon.svg) center no-repeat;
+}
+
+.button-app-store:hover:before {
+    background: url(../icons/app-store-light-icon.svg) center no-repeat;
+
+}
+
+a,
+button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.burger-link {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+header {
+    padding: 10px 0;
+}
+
+.body-wrapper {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header .inner {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
 }
 
 #promo {
-    background-image: url('../img/hero.jpg');
+    background-image: url('../img/img-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: co;
+    background-position: cover;
     padding: 60px;
+    border-radius: 40px;
+}
+
+#promo h1,
+#promo p {
+    color: #E1D4C9;
+}
+
+#promo .promo-text {
+    max-width: 530px;
+}
+
+#top-menu {
+    flex: 1 0 0;
+    text-align: center;
+}
+
+#logo {
+    flex-basis: 100px;
+}
+
+#menu-link {
+    flex-basis: 72px;
+}
+
+.coffe-icon {
+    position: relative;
+    top: 3px;
+}
+
+#top-menu ul>li {
+    display: inline;
+    padding: 10px 15px;
+    margin: 0 5px;
+}
+
+#menu-link {
+    text-align: right;
 }

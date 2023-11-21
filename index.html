@@ -8,44 +8,53 @@
     <meta name="author" content="Kate">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="body-wrapper">
         <header>
-            <div class="logo"><img src="img/logo.png" alt="Logo Cofee House"></div>
-            <nav class="menu">
-                <ul>
-                    <li>Favorite coffee</li>
-                    <li>About</li>
-                    <li>Mobile app</li>
-                    <li>Contact us</li>
-                </ul>
-            </nav>
-            <div class="right">
-                <div class="cofee-cup-text">Menu</div>
-                <div class="coffe-icon"><img src="icons/coffee-cup.svg" alt="Coffe cup icon"></div>
+            <div class="inner">
+                <div id="logo" class=""><img src="img/logo.png" alt="Logo Cofee House"></div>
+                <div id="top-menu" class="">
+                    <ul>
+                        <li><a href="#favorite">Favorite coffee</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#mobile-app">Mobile app</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div id="menu-link" class="cofee-cup-text"><a href="#">Menu <span class="coffe-icon"><img
+                                src="icons/coffee-cup.svg" alt="Coffe cup icon"></span></a>
+                </div>
             </div>
         </header>
         <main>
             <section id="promo">
                 <div class="promo-text">
-                    <h1>Enjoy premium coffee at our charming cafe</h1>
-                    <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular
+                    <h1><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
+                    <p class="medium">With its inviting atmosphere and delicious coffee options, the Coffee House
+                        Resource is a
+                        popular
                         destination for coffee lovers and those seeking a warm and inviting space to enjoy their
                         favorite beverage.</p>
-                    <button>Menu</button>
+                    <button class="button-primary">Menu<span class="coffe-icon"><img src="icons/coffee-cup.svg"
+                                alt="Coffe cup icon"></span></button>
                 </div>
             </section>
             <section id="favorite">
-                <h2>Choose your favorite coffee</h2>
+                <h2>Choose your <span class="accent">favorite</span> coffee</h2>
                 <div class="slider">
                     <div class="product"></div>
                     <div class="img"><img src="img/coffee-slider-1.png" alt="Coffee cup"></div>
                     <div class="name">
                         <h3>S’mores Frappuccino</h3>
                     </div>
-                    <div class="text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before
+                    <div class="text">This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                        before
                         being topped with oat milk.</div>
                     <div class="price">$5.50</div>
                 </div>
@@ -54,29 +63,45 @@
                 </div>
             </section>
             <section id="enjoy">
-                <h2>Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch
+                <h2>Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of
+                    hot beverages, relax,
+                    catch
                     up with friends, or get some work done.</h2>
                 <div class="gallery">
-                    <div class="image"><img src="img/gallery/img-1.jpg" alt=""></div>
-                    <div class="image"><img src="img/gallery/img-2.jpg" alt=""></div>
-                    <div class="image"><img src="img/gallery/img-3.jpg" alt=""></div>
-                    <div class="image"><img src="img/gallery/img-4.jpg" alt=""></div>
+                    <div class="image"><img src="img/gallery/about-1.jpg" alt=""></div>
+                    <div class="image"><img src="img/gallery/about-2.jpg" alt=""></div>
+                    <div class="image"><img src="img/gallery/about-3.jpg" alt=""></div>
+                    <div class="image"><img src="img/gallery/about-4.jpg" alt=""></div>
                 </div>
             </section>
-            <section id="download">
+            <section id="mobile-app">
                 <div class="blocks">
-                    <h2>Download our apps to start ordering</h2>
-                    <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from
+                    <h2><span class="accent">Download</span> our apps to start ordering</h2>
+                    <p>Download the Resource app today and experience the comfort of ordering your favorite coffee
+                        from
                         wherever you are</p>
                     <div class="button-block">
-                        <button></button>
-                        <button></button>
+                        <button class="button-app-store">
+                            <span class="text">
+                                <p class="caption">Available on the </p>
+                                <p class="medium">App
+                                    Store</p>
+                            </span>
+                        </button>
+                        <button class="button-google-play">
+                            <span class="text">
+                                <p class="caption">Available on the </p>
+                                <p class="medium">Google
+                                    Play</p>
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div class="blocks">
                     <img src="img/mobile-screens.png" alt="">
                 </div>
             </section>
+
         </main>
         <footer>
             <div class="blocks">
