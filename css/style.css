@@ -3,13 +3,18 @@
     src: url("../fonts/Inter-Italic.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #E1D4C9;
     color: #403F3D;
-    line-height: 1.6666;
+    line-height: 150%;
     font-weight: 400;
     margin: 0;
+    font-size: 16px;
 }
 
 h1 {
@@ -39,7 +44,19 @@ h3 {
 .accent {
     font-family: "Inter Italic";
     color: #B0907A;
-    letter-spacing: 0.4px;
+    letter-spacing: 1px;
+}
+
+#enjoy .accent {
+    letter-spacing: 1.3px;
+}
+
+#about .accent {
+    letter-spacing: 0.5px;
+}
+
+#contacts .accent {
+    letter-spacing: 0.7px;
 }
 
 .medium {
@@ -58,7 +75,14 @@ button {
     cursor: pointer;
 }
 
-.button-primary {
+a,
+button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+button.button-primary {
     width: 200px;
     height: 64px;
     background-color: #E1D4C9;
@@ -66,7 +90,7 @@ button {
     border: 1px solid #E1D4C9;
     border-radius: 100px;
     color: #403F3D;
-    font: inherit;
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -166,13 +190,6 @@ a {
 
 }
 
-a,
-button {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 150%;
-}
-
 .burger-link {
     font-size: 32px;
     font-weight: 600;
@@ -180,13 +197,13 @@ button {
 }
 
 header {
-    padding: 14px 0 17px;
+    padding: 14px 0 18px;
 }
 
 #logo img {
     width: 100px;
     position: relative;
-    top: 5px;
+    top: 6px;
 }
 
 .body-wrapper {
@@ -210,7 +227,7 @@ section {
     margin-bottom: 100px;
 }
 
-#hero {
+#enjoy {
     background-image: url('../img/img-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -221,11 +238,11 @@ section {
     color: #E1D4C9;
 }
 
-#hero p {
+#enjoy p {
     margin: 0 0 40px 0;
 }
 
-#hero .promo-text {
+#enjoy .promo-text {
     max-width: 530px;
 }
 
@@ -244,23 +261,22 @@ section {
 
 #favorite-coffee .product img {
     max-width: 480px;
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 }
 
 #favorite-coffee .product .text {
     margin-bottom: 17px;
-    line-height: 24px;
 }
 
 #favorite-coffee .slider {
     position: relative;
 }
 
-.ms-nav-next {
+.nav-next {
     display: flex;
     left: auto;
-    right: 0;
-    top: 50%;
+    right: 4px;
+    top: 47%;
     transform: translateY(-50%);
     position: absolute;
     transition: all 0.1s ease-out;
@@ -269,27 +285,35 @@ section {
     justify-content: center;
 }
 
-.ms-nav-next::before,
-.ms-nav-prev::before {
+.nav-next::before,
+.nav-prev::before {
     content: '' !important;
     width: 24px;
     height: 24px;
 
 }
 
-.ms-nav-next::before {
+.nav-next::before {
     background: url(../icons/arrow-right.svg) center no-repeat;
 }
 
-.ms-nav-prev::before {
+.nav-prev::before {
     background: url(../icons/arrow-left.svg) center no-repeat;
 }
 
-.ms-nav-prev {
+.nav-next:hover:before {
+    background: url(../icons/arrow-light-right.svg) center no-repeat;
+}
+
+.nav-prev:hover::before {
+    background: url(../icons/arrow-light-left.svg) center no-repeat;
+}
+
+.nav-prev {
     display: flex;
-    left: 0;
+    left: 4px;
     right: auto;
-    top: 50%;
+    top: 47%;
     bottom: auto;
     transform: translateY(-50%);
     position: absolute;
@@ -302,13 +326,19 @@ section {
     justify-content: center;
 }
 
-.ms-nav-next,
-.ms-nav-prev {
+.nav-next,
+.nav-prev {
     background: transparent;
     border: 1px solid #665F55;
     border-radius: 100px;
     width: 60px;
     height: 60px;
+}
+
+.nav-next:hover,
+.nav-prev:hover {
+    background: #665F55;
+    border: 1px solid #665F55;
 }
 
 .bullets {
@@ -330,7 +360,7 @@ section {
 }
 
 #about {
-    margin-bottom: 63px;
+    margin-bottom: 60px;
 }
 
 #about .gallery {
@@ -451,11 +481,16 @@ footer .social ul li a i {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 6px 0 0 62px;
+    padding: 8px 0 0 62px;
+}
+
+#contacts h3 {
+    margin-bottom: 37px;
 }
 
 footer .footer-contacts ul li {
     margin-bottom: 16px;
+    letter-spacing: 0.4px;
 }
 
 footer .footer-contacts ul li i {
@@ -518,14 +553,19 @@ footer .social ul li a i:before {
 
 .coffe-icon {
     position: relative;
-    top: 3px;
-    margin-left: 3px;
+    top: 2px;
+    margin-left: 5px;
+}
+
+#enjoy button .coffe-icon {
+    top: 4px;
+    margin-left: 7px;
 }
 
 #top-menu ul>li {
     display: inline;
-    padding: 10px 13px;
-    margin: 0 11px 0 0;
+    padding: 10px 12px;
+    margin: 0 12px 0 0;
 }
 
 #menu-link {
