@@ -44,19 +44,6 @@ h3 {
 .accent {
     font-family: "Inter Italic";
     color: #B0907A;
-    letter-spacing: 1px;
-}
-
-#enjoy .accent {
-    letter-spacing: 1.3px;
-}
-
-#about .accent {
-    letter-spacing: 0.5px;
-}
-
-#contacts .accent {
-    letter-spacing: 0.7px;
 }
 
 .medium {
@@ -205,7 +192,7 @@ a {
 }
 
 header {
-    padding: 14px 0 18px;
+    padding: 16px 0;
 }
 
 #logo img {
@@ -260,6 +247,7 @@ section {
 
 #favorite-coffee h3 {
     margin-bottom: 15px;
+    margin-top: 5px;
 }
 
 #favorite-coffee .product {
@@ -501,7 +489,7 @@ footer .footer-contacts ul {
 
 footer .social ul li {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 footer .social ul li a {
@@ -524,7 +512,7 @@ footer .social ul li a i {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 8px 0 0 50px;
+    padding: 5px 0 0 50px;
 }
 
 #contacts h3 {
@@ -533,7 +521,7 @@ footer .social ul li a i {
 
 footer .footer-contacts ul li {
     margin-bottom: 16px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.2px;
 }
 
 footer .footer-contacts ul li i {
@@ -651,6 +639,7 @@ footer .social ul li a i::before {
 .item {
     padding: 20px;
     width: calc(100% / 4 - 0.01px);
+    display: flex;
 }
 
 .item .image img {
@@ -666,21 +655,16 @@ footer .social ul li a i::before {
 
 .img-caption {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .product-thumb {
     border: 1px solid #C1B6AD;
     border-radius: 40px;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-flex: 1;
-    min-width: 0;
-    position: relative;
-    transition: all 0.075s ease-out;
-    overflow: hidden;
-    transform-style: preserve-3d;
 }
 
 * {
@@ -696,6 +680,12 @@ footer .social ul li a i::before {
 
 .product-thumb .price h3 {
     margin-bottom: 0;
+}
+
+.product-thumb .price {
+    align-items: flex-end;
+    flex: 1 0 auto;
+    display: flex;
 }
 
 #menu {
