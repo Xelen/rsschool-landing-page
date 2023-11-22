@@ -381,6 +381,11 @@ section {
     border-radius: 20px;
 }
 
+#about .gallery-inner {
+    display: flex;
+    flex-direction: column;
+}
+
 #about .gallery-inner:nth-child(1) {
     padding-right: 40px;
 }
