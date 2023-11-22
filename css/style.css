@@ -711,11 +711,11 @@ footer .social ul li a i::before {
     padding: 1px 0 0 10px
 }
 
-#menu .menu-tabs ul {
+#menu .menu-tabs {
     padding: 0;
 }
 
-.menu-tabs ul li i::before {
+.menu-tabs li i::before {
     display: inline-block;
     content: '';
     top: 5px;
@@ -755,7 +755,7 @@ footer .social ul li a i::before {
     color: #E1D4C9;
 }
 
-.menu-tabs ul li i {
+.menu-tabs li i {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -764,7 +764,7 @@ footer .social ul li a i::before {
     margin-right: 8px;
 }
 
-.menu-tabs ul li.active i {
+.menu-tabs li.active i {
     background: #E1D4C9;
     position: relative;
     top: -1px;
