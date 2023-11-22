@@ -215,7 +215,7 @@ header {
 }
 
 .body-wrapper {
-    max-width: 1360px;
+    max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 40px;
@@ -404,9 +404,20 @@ section {
 #about .gallery .gallery-inner .image-box img {
     position: relative;
     width: 100%;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    transform: scale(1.1);
+}
+
+#about .gallery .gallery-inner .image-box.image1 img,
+#about .gallery .gallery-inner .image-box.image4 img {
+    bottom: 6%;
+}
+
+#about .gallery .gallery-inner .image-box.image2 img,
+#about .gallery .gallery-inner .image-box.image3 img {
+    bottom: 27%;
 }
 
 #mobile-app {
@@ -513,7 +524,7 @@ footer .social ul li a i {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 8px 0 0 62px;
+    padding: 8px 0 0 50px;
 }
 
 #contacts h3 {
@@ -634,6 +645,7 @@ footer .social ul li a i::before {
 .menu-block {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -20px;
 }
 
 .item {
@@ -644,6 +656,11 @@ footer .social ul li a i::before {
 .item .image img {
     display: block;
     max-width: 100%;
+    transform: scale(1.1);
+}
+
+.item .image {
+    overflow: hidden;
     border-radius: 40px;
 }
 
@@ -681,6 +698,10 @@ footer .social ul li a i::before {
     margin-bottom: 0;
 }
 
+#menu {
+    margin-bottom: 80px;
+}
+
 #menu h2 {
     max-width: 800px;
     margin: 0 auto 40px;
@@ -692,6 +713,11 @@ footer .social ul li a i::before {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    padding: 1px 0 0 10px
+}
+
+#menu .menu-tabs ul {
+    padding: 0;
 }
 
 .menu-tabs ul li i::before {
@@ -716,8 +742,8 @@ footer .social ul li a i::before {
 }
 
 #menu .menu-tabs li {
-    padding: 10px 15px 10px 9px;
-    margin: 0 12px 0 0;
+    padding: 8px 15px 7px 7px;
+    margin: 0 10px 0 0;
     border: 1px solid #C1B6AD;
     background: transparent;
     border-radius: 40px;
@@ -740,18 +766,25 @@ footer .social ul li a i::before {
     display: inline-block;
     border-radius: 100px;
     background: #C1B6AD;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 .menu-tabs ul li.active i {
     background: #E1D4C9;
+    position: relative;
+    top: -1px;
 }
 
-#menu-page #menu-link.cofee-cup-text a {
+#menu-page #menu-link.cofee-cup-text .mpage {
     border-bottom: 2px;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-color: #403F3D;
     border-style: solid;
+    max-width: 72px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
 }
