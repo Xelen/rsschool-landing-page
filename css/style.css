@@ -82,7 +82,7 @@ button {
     line-height: 150%;
 }
 
-button.button-primary {
+.button-primary {
     width: 200px;
     height: 64px;
     background-color: #E1D4C9;
@@ -98,9 +98,7 @@ button.button-primary {
     display: none;
 }
 
-.button-primary:hover .coffe-icon {
-    display: inline-block;
-    margin-left: 5px;
+.btn:hover {
     animation: 1s show ease;
 }
 
@@ -112,6 +110,11 @@ button.button-primary {
     to {
         opacity: 1;
     }
+}
+
+.button-primary:hover .coffe-icon {
+    display: inline-block;
+    margin-left: 5px;
 }
 
 a {
@@ -136,6 +139,7 @@ a {
 #mobile-app .button-app-store:hover {
     background-color: #403F3D;
     color: #E1D4C9;
+    border: 0;
 }
 
 .button-app-store span.text span.caption,
@@ -448,6 +452,26 @@ section {
     padding-right: 40px;
 }
 
+#contacts .footer-contacts a {
+    color: #E1D4C9;
+    padding-bottom: 3px;
+}
+
+#contacts .footer-contacts li {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+#contacts .footer-contacts li.link a:hover {
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #E1D4C9;
+    border-style: solid;
+}
+
 footer .social ul {
     list-style: none;
     padding: 0;
@@ -472,6 +496,10 @@ footer .social ul li a {
     display: block;
     width: 60px;
     height: 60px;
+}
+
+footer .social ul li a:hover {
+    background-color: #E1D4C9;
 }
 
 footer .social ul li a i {
@@ -525,16 +553,28 @@ footer .social ul li a i:before {
     height: 24px;
 }
 
-.twitter a i:before {
+.twitter a i::before {
     background: url(../icons/twitter.svg) center no-repeat;
 }
 
-.facebook a i:before {
+.facebook a i::before {
     background: url(../icons/facebook.svg) center no-repeat;
 }
 
-.instagram a i:before {
+.instagram a i::before {
     background: url(../icons/instagram.svg) center no-repeat;
+}
+
+.twitter a:hover i::before {
+    background: url(../icons/twitter-dark.svg) center no-repeat;
+}
+
+.facebook a:hover i::before {
+    background: url(../icons/facebook-dark.svg) center no-repeat;
+}
+
+.instagram a:hover i::before {
+    background: url(../icons/instagram-dark.svg) center no-repeat;
 }
 
 
@@ -570,4 +610,17 @@ footer .social ul li a i:before {
 
 #menu-link {
     text-align: right;
+}
+
+#menu-link.cofee-cup-text a {
+    padding-bottom: 3px;
+}
+
+#menu-link.cofee-cup-text a:hover {
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #403F3D;
+    border-style: solid;
 }
