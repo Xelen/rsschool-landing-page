@@ -760,10 +760,6 @@ footer .social ul li a i::before {
     position: relative;
 }
 
-#menu-link.cofee-cup-text {
-    /* padding-bottom: 4px; */
-}
-
 #top-menu li a:hover::before {
     content: '';
     background: #403F3D;
@@ -810,6 +806,6 @@ footer .social ul li a i::before {
     border-style: solid;
 }
 
-.menu-title {
+h1.menu-title {
     display: none;
 }
