@@ -85,17 +85,13 @@ button {
     display: none;
 }
 
-.menu-btn:hover {
-    animation: 0.7s show ease;
-}
-
 .btn:hover {
     animation: 1s show ease;
 }
 
 @keyframes show {
     from {
-        opacity: 0;
+        opacity: 0.5;
     }
 
     to {
@@ -468,14 +464,6 @@ section {
     line-height: 150%;
 }
 
-#contacts .footer-contacts li.link a:hover {
-    border-bottom: 2px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-color: #E1D4C9;
-    border-style: solid;
-}
 
 footer .social ul {
     list-style: none;
@@ -622,16 +610,6 @@ footer .social ul li a i::before {
     padding-bottom: 2px;
 }
 
-#menu-link.cofee-cup-text a:hover,
-#top-menu li a:hover {
-    border-bottom: 2px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-color: #403F3D;
-    border-style: solid;
-}
-
 .menu-block {
     display: flex;
     flex-wrap: wrap;
@@ -648,6 +626,12 @@ footer .social ul li a i::before {
     display: block;
     max-width: 100%;
     transform: scale(1.1);
+}
+
+
+.item .image img:hover {
+    transform: scale(1);
+    transition: 1s;
 }
 
 .item .image {
@@ -767,6 +751,38 @@ footer .social ul li a i::before {
     top: -1px;
 }
 
+#top-menu li,
+#menu-link.cofee-cup-text {
+    position: relative;
+}
+
+#menu-link.cofee-cup-text {
+    padding-bottom: 4px;
+}
+
+#top-menu li a:hover::before {
+    content: '';
+    background: #403F3D;
+    height: 2px;
+    width: 85%;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: 1s show ease;
+}
+
+#menu-link.cofee-cup-text a:hover:before {
+    content: '';
+    background: #403F3D;
+    height: 2px;
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: 1s show ease;
+}
+
 #menu-page #menu-link.cofee-cup-text .mpage {
     border-bottom: 2px;
     border-top: 0;
@@ -779,4 +795,13 @@ footer .social ul li a i::before {
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
+}
+
+#contacts .footer-contacts li.link a:hover {
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #E1D4C9;
+    border-style: solid;
 }
