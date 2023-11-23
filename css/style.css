@@ -352,6 +352,7 @@ section {
 .bullet.active,
 .bullet:hover {
     background: #665F55;
+    transition: 1s;
 }
 
 #about {
@@ -792,6 +793,7 @@ h1.menu-title {
 #menu .menu-tabs li:hover {
     background: #665F55;
     border: 1px solid #665F55;
+    transition: 1s;
 }
 
 #menu .menu-tabs li.active,
