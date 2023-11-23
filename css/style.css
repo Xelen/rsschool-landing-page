@@ -227,6 +227,7 @@ section {
     padding: 100px;
     border-radius: 40px;
     color: #E1D4C9;
+    margin-top: 3px;
 }
 
 #enjoy p {
@@ -442,10 +443,10 @@ section {
     background-color: #665F55;
     color: #E1D4C9;
     border-radius: 40px;
-    padding: 100px 100px 90px;
+    padding: 100px 100px 95px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
 }
 
 #contacts .blocks {
@@ -455,7 +456,6 @@ section {
 
 #contacts .footer-contacts a {
     color: #E1D4C9;
-    padding-bottom: 3px;
 }
 
 #contacts .footer-contacts li {
@@ -502,7 +502,7 @@ footer .social ul li a i {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 5px 0 0 50px;
+    padding: 35px 0 0 50px;
 }
 
 #contacts h3 {
@@ -511,11 +511,15 @@ footer .social ul li a i {
 
 footer .footer-contacts ul li {
     margin-bottom: 16px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
 }
 
 footer .footer-contacts ul li i {
     margin-right: 6px;
+}
+
+#contacts>div:nth-child(2)>div>ul>li.phone.link.btn {
+    margin-bottom: 18px;
 }
 
 footer .footer-contacts ul li i::before {
@@ -640,7 +644,7 @@ footer .social ul li a i::before {
 }
 
 .img-caption {
-    padding: 20px;
+    padding: 22px 20px 18px 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -693,7 +697,7 @@ footer .social ul li a i::before {
 }
 
 #menu .menu-tabs {
-    padding: 0;
+    padding: 0 0 0 15px;
 }
 
 .menu-tabs li i::before {
@@ -719,7 +723,7 @@ footer .social ul li a i::before {
 
 #menu .menu-tabs li {
     padding: 8px 15px 7px 7px;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
     border: 1px solid #C1B6AD;
     background: transparent;
     border-radius: 40px;
@@ -757,7 +761,7 @@ footer .social ul li a i::before {
 }
 
 #menu-link.cofee-cup-text {
-    padding-bottom: 4px;
+    /* padding-bottom: 4px; */
 }
 
 #top-menu li a:hover::before {
@@ -772,13 +776,13 @@ footer .social ul li a i::before {
     animation: 1s show ease;
 }
 
-#menu-link.cofee-cup-text a:hover:before {
+#menu-link.cofee-cup-text a:hover::before {
     content: '';
     background: #403F3D;
     height: 2px;
     width: 75%;
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     right: 0;
     animation: 1s show ease;
 }
@@ -804,4 +808,8 @@ footer .social ul li a i::before {
     border-right: 0;
     border-color: #E1D4C9;
     border-style: solid;
+}
+
+.menu-title {
+    display: none;
 }
