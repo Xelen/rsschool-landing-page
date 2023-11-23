@@ -346,9 +346,11 @@ section {
     height: 4px;
     margin: 0 6px;
     border-radius: 100px;
+    cursor: pointer;
 }
 
-.bullet.active {
+.bullet.active,
+.bullet:hover {
     background: #665F55;
 }
 
