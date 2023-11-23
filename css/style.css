@@ -721,40 +721,6 @@ footer .social ul li a i::before {
     background: url(../icons/dessert.svg) center no-repeat;
 }
 
-#menu .menu-tabs li {
-    padding: 8px 15px 7px 7px;
-    margin: 0 15px 0 0;
-    border: 1px solid #C1B6AD;
-    background: transparent;
-    border-radius: 40px;
-    min-width: 90px;
-    display: inline-block;
-}
-
-#menu .menu-tabs li.active {
-    background: #665F55;
-    border: 1px solid #665F55;
-}
-
-#menu .menu-tabs li.active a {
-    color: #E1D4C9;
-}
-
-.menu-tabs li i {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    border-radius: 100px;
-    background: #C1B6AD;
-    margin-right: 8px;
-}
-
-.menu-tabs li.active i {
-    background: #E1D4C9;
-    position: relative;
-    top: -1px;
-}
-
 #top-menu li,
 #menu-link.cofee-cup-text {
     position: relative;
@@ -808,4 +774,41 @@ footer .social ul li a i::before {
 
 h1.menu-title {
     display: none;
+}
+
+#menu .menu-tabs li {
+    padding: 8px 15px 7px 7px;
+    margin: 0 15px 0 0;
+    border: 1px solid #C1B6AD;
+    background: transparent;
+    border-radius: 40px;
+    min-width: 90px;
+    display: inline-block;
+}
+
+#menu .menu-tabs li.active,
+#menu .menu-tabs li:hover {
+    background: #665F55;
+    border: 1px solid #665F55;
+}
+
+#menu .menu-tabs li.active,
+#menu .menu-tabs li:hover a {
+    color: #E1D4C9;
+}
+
+.menu-tabs li i {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #C1B6AD;
+    margin-right: 8px;
+}
+
+.menu-tabs li.active i,
+.menu-tabs li:hover i {
+    background: #E1D4C9;
+    position: relative;
+    top: -1px;
 }
