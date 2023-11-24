@@ -739,10 +739,6 @@ footer .social ul li a i::before {
     line-height: 150%;
 }
 
-#menu-page #menu-link.cofee-cup-text {
-    top: -2px;
-}
-
 .cofee-cup-text .mpage::after {
     position: absolute;
     content: '';
