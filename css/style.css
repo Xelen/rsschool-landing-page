@@ -112,7 +112,6 @@ a {
 #mobile-app .button-app-store:hover {
     background-color: #403F3D;
     color: #E1D4C9;
-    border: 0;
 }
 
 .button-app-store span.text span.caption,
@@ -466,7 +465,7 @@ footer .social ul li {
 }
 
 footer .social ul li a {
-    border: 1px solid #ccc;
+    border: 1px solid #C1B6AD;
     border-radius: 100%;
     text-align: center;
     display: block;
@@ -828,7 +827,7 @@ h1.menu-title {
 }
 
 .btn:hover {
-    animation: 1.3s show ease;
+    transition: background 0.6s ease-in-out, color 0.6s ease-in-out;
 }
 
 .button-primary .coffe-icon {
