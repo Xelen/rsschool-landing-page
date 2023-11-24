@@ -7,6 +7,11 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #E1D4C9;
@@ -70,44 +75,18 @@ button {
 }
 
 .button-primary {
+    display: inline-block;
+    text-align: center;
     width: 200px;
     height: 64px;
     background-color: #E1D4C9;
-    padding: 15px;
+    padding: 18px 15px 15px 15px;
     border: 1px solid #E1D4C9;
     border-radius: 100px;
     color: #403F3D;
     font-family: 'Inter', sans-serif;
 }
 
-.btn:hover {
-    animation: 1s show ease;
-}
-
-@keyframes show {
-    from {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes show2 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.button-primary:hover .coffe-icon {
-    display: inline-block;
-    margin-left: 5px;
-}
 
 a {
     color: #403F3D;
@@ -232,11 +211,11 @@ section {
     padding: 100px;
     border-radius: 40px;
     color: #E1D4C9;
-    margin-top: 3px;
+    margin-top: 4px;
 }
 
 #enjoy p {
-    margin: 0 0 40px 0;
+    margin: 0 0 41px 0;
 }
 
 #enjoy .promo-text {
@@ -249,7 +228,7 @@ section {
 
 #favorite-coffee h3 {
     margin-bottom: 15px;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 #favorite-coffee .product {
@@ -361,7 +340,7 @@ section {
 }
 
 #about {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
 }
 
 #about .gallery {
@@ -373,6 +352,8 @@ section {
     overflow: hidden;
     width: 660px;
     height: 590px;
+    top: -1px;
+    position: relative;
 }
 
 #about .gallery .image2,
@@ -380,6 +361,8 @@ section {
     overflow: hidden;
     width: 660px;
     height: 430px;
+    top: -1px;
+    position: relative;
 }
 
 #about .gallery .gallery-inner .image-box {
@@ -423,7 +406,7 @@ section {
 #mobile-app {
     display: flex;
     flex-direction: row;
-    margin-bottom: 93px;
+    margin-bottom: 94px;
 }
 
 #mobile-app p {
@@ -456,7 +439,7 @@ section {
     background-color: #665F55;
     color: #E1D4C9;
     border-radius: 40px;
-    padding: 100px 100px 95px;
+    padding: 100px 100px 94px;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -515,7 +498,7 @@ footer .social ul li a i {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 35px 0 0 50px;
+    padding: 33px 0 0 50px;
 }
 
 #contacts h3 {
@@ -523,8 +506,8 @@ footer .social ul li a i {
 }
 
 footer .footer-contacts ul li {
-    margin-bottom: 16px;
-    letter-spacing: 0.3px;
+    margin-bottom: 18px;
+    letter-spacing: 0.1px;
 }
 
 footer .footer-contacts ul li i {
@@ -601,17 +584,6 @@ footer .social ul li a i::before {
     flex-basis: 100px;
 }
 
-.coffe-icon {
-    position: relative;
-    top: 2px;
-    margin-left: 5px;
-}
-
-#enjoy button .coffe-icon {
-    top: 4px;
-    margin-left: 7px;
-}
-
 #top-menu ul>li {
     display: inline;
     padding: 10px 12px;
@@ -653,7 +625,7 @@ footer .social ul li a i::before {
 
 .item .image {
     overflow: hidden;
-    border-radius: 40px;
+    border-radius: 39px;
 }
 
 .img-caption {
@@ -697,7 +669,7 @@ footer .social ul li a i::before {
 
 #menu h2 {
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 1px auto 40px;
     text-align: center;
 }
 
@@ -751,7 +723,7 @@ footer .social ul li a i::before {
 
 .menu-btn::after {
     width: 0;
-    transition: 0.3s;
+    transition: 0.5s;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -765,6 +737,10 @@ footer .social ul li a i::before {
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
+}
+
+#menu-page #menu-link.cofee-cup-text {
+    top: -2px;
 }
 
 .cofee-cup-text .mpage::after {
@@ -839,29 +815,67 @@ h1.menu-title {
     margin-right: 8px;
 }
 
+.coffe-tab {
+    left: -2px;
+    position: relative;
+    padding: 8px 17px 7px 7px;
+}
+
 .menu-tabs li.active i,
 .menu-tabs li:hover i {
     background: #E1D4C9;
     position: relative;
-    top: -1px;
+
 }
 
-.button-primary:hover .text-menu {
-    animation: 1.5s show2 ease;
+.coffe-icon {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
 }
 
-@keyframes slide {
-    100% {
-        left: 0;
-    }
+#enjoy button .coffe-icon {
+    top: 4px;
+    margin-left: 7px;
+}
+
+.btn:hover {
+    animation: 1.3s show ease;
 }
 
 .button-primary .coffe-icon {
     display: none;
+    top: 4px;
+    margin-left: 7px;
 }
 
 .button-primary:hover .coffe-icon {
+    opacity: 1;
     position: relative;
     display: inline-block;
-    animation: 1s show ease;
+    margin-left: 2px;
+    animation: 1.2s show ease;
+}
+
+.button-primary .text-menu {
+    top: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.button-primary:hover .text-menu {
+    width: 50px;
+    top: 0;
+    transition: transform 0.3s;
+    transform: translate(-2px, 0px);
+}
+
+@keyframes show {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
