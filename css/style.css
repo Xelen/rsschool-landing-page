@@ -82,7 +82,7 @@ button {
     width: 200px;
     height: 64px;
     background-color: #E1D4C9;
-    padding: 18px 15px 15px 15px;
+    padding: 20px 15px 15px 15px;
     border: 1px solid #E1D4C9;
     border-radius: 100px;
     color: #403F3D;
@@ -579,10 +579,6 @@ footer .social ul li a i::before {
     margin: 0 12px 0 0;
 }
 
-#menu-link {
-    text-align: right;
-}
-
 #menu-link.cofee-cup-text a,
 #top-menu li a {
     padding-bottom: 2px;
@@ -724,17 +720,6 @@ footer .social ul li a i::before {
     line-height: 150%;
 }
 
-.cofee-cup-text .mpage::after {
-    position: absolute;
-    content: '';
-    right: 0;
-    bottom: -4px;
-    display: block;
-    width: 73%;
-    height: 2px;
-    background: #403F3D;
-}
-
 .link .sliding-line {
     position: relative;
 }
@@ -868,4 +853,28 @@ h1.menu-title {
 
 .product-thumb {
     cursor: pointer;
+}
+
+.menu-tabs .tab {
+    cursor: pointer;
+}
+
+.menu-tabs .tab.active {
+    cursor: default;
+}
+
+#menu-page #menu-link .menu-btn::after {
+    width: 100%;
+}
+
+#menu-page #menu-link .menu-btn {
+    text-align: right;
+    cursor: default;
+}
+
+.menu-btn::after {
+    width: 0;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
 }
