@@ -885,3 +885,7 @@ h1.menu-title {
     left: 50%;
     transform: translateX(-50%);
 }
+
+.bullet.active {
+    cursor: default;
+}
