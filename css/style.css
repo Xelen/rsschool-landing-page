@@ -545,7 +545,7 @@ footer .footer-contacts ul li svg {
     transform: scale(1.1);
 }
 
-#menu .menu-block .item .image:hover img {
+#menu .menu-block .item .product-thumb:hover .image img {
     transform: scale(1);
 }
 
