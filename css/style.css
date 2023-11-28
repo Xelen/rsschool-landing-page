@@ -3,6 +3,12 @@
     src: url("../fonts/inter_semi_bold_italic.ttf");
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -13,6 +19,7 @@ body {
 }
 
 body {
+    display: block;
     font-family: 'Inter', sans-serif;
     background-color: #E1D4C9;
     color: #403F3D;
@@ -235,8 +242,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: 0;
-    padding: 102px 100px 100px 100px;
+    background-position: center;
+    padding: 102px 100px 101px 100px;
     border-radius: 40px;
     color: #E1D4C9;
     margin-top: 2.5px;
@@ -390,6 +397,7 @@ section {
 
 #mobile-app {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 93.5px;
 }
@@ -424,8 +432,9 @@ section {
     background-color: #665F55;
     color: #E1D4C9;
     border-radius: 40px;
-    padding: 100px 100px 99px;
+    padding: 100px 100px 101px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: start;
 }
@@ -474,7 +483,7 @@ footer .footer-contacts ul {
 
 footer .social ul li {
     display: inline-block;
-    margin-right: 7px;
+    margin-right: 9px;
 }
 
 footer .social ul li a {
@@ -494,7 +503,7 @@ footer .social ul li a:hover {
 }
 
 #contacts>div:nth-child(2) {
-    padding: 33px 0 0 62px;
+    padding: 31px 0 0 50px;
 }
 
 #contacts h3 {
@@ -805,9 +814,5 @@ h1.menu-title {
 }
 
 #menu-link {
-    text-align: right;
-}
-
-.coffe-house2 {
     text-align: right;
 }
