@@ -120,11 +120,7 @@
         display: none;
     }
 
-    .menu-hamburger {
-        display: block;
-    }
-
-    .menu-hamburger span {
+    .menu-burger span {
         display: block;
         height: 1.6px;
         border-radius: 10px;
@@ -133,11 +129,11 @@
         transition: .5s all;
     }
 
-    .hamburger-btn>span:nth-child(1) {
+    .burger-btn>span:nth-child(1) {
         margin-bottom: 8px;
     }
 
-    .menu-hamburger {
+    .menu-burger {
         display: flex;
         width: 44px;
         height: 44px;
@@ -146,7 +142,7 @@
         cursor: pointer;
     }
 
-    .hamburger-btn {
+    .burger-btn {
         margin: auto;
         width: 16px;
         display: block;
