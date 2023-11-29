@@ -1,8 +1,8 @@
 @media (hover: hover) and (pointer: fine) {}
 
 @media screen and (max-width: 800px) {
-    #enjoy {
-        padding: 100px 98px 100px 60px;
+    #enjoy .promo-text {
+        padding: 100px 0px 100px 60px;
     }
 
     #enjoy h1 {

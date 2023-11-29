@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+::after,
+::before {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -215,7 +220,9 @@ header {
 }
 
 .body-wrapper {
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     width: 100%;
     max-width: 1440px;
     margin-right: auto;
@@ -238,23 +245,42 @@ section {
 }
 
 #enjoy {
-    background-image: url('../img/img-hero.jpg');
+    /* background-image: url('../img/img-hero.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
-    padding: 102px 100px 101px 100px;
+
     border-radius: 40px;
     color: #E1D4C9;
     margin-top: 2.5px;
+    width: 100%;
+}
+
+#enjoy .promo-text {
+    padding: 102px 0px 101px 100px;
+}
+
+.video-block {
+    position: relative;
 }
 
 #enjoy p {
     margin: 0 0 40px 0;
 }
 
+.enjoy-video {
+    position: absolute;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #enjoy .promo-text {
-    max-width: 530px;
+    max-width: 750px;
+    z-index: 1;
+    position: relative;
 }
 
 #favorite-coffee {
