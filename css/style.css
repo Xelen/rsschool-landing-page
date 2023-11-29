@@ -119,7 +119,7 @@ button {
     box-sizing: border-box;
     text-align: center;
     width: 200px;
-    height: 63px;
+    height: 64px;
     background-color: #E1D4C9;
     padding: 19px 15px 15px 15px;
     border: 1px solid #E1D4C9;
@@ -166,7 +166,7 @@ a {
 .button-app-store svg,
 .button-google-play svg {
     position: absolute;
-    left: 20px;
+    left: 19px;
     top: 13px
 }
 
