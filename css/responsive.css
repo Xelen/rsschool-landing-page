@@ -1,3 +1,5 @@
+@media (hover: hover) and (pointer: fine) {}
+
 @media screen and (max-width: 800px) {
     #enjoy {
         padding: 100px 98px 100px 60px;
@@ -118,23 +120,34 @@
         display: none;
     }
 
-    .menu-hamburger {
+    /* .menu-hamburger {
         display: block;
-        /* position: absolute;
-        right: 10px;
-        top: 50%; */
         transform: translateY(-50%);
-        width: 26px;
+        width: 16px;
         height: 12px;
+    } */
+
+    /* .menu-hamburger span {
+        display: block;
+        height: 1.5px;
+        width: 100%;
+        background-color: #403F3D;
+        margin-bottom: 8px;
+        transition: .5s all;
+    } */
+    .menu-hamburger {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #403F3D;
+        border-radius: 50px;
+        cursor: pointer;
     }
 
-    .menu-hamburger span {
+    .hamburger-btn {
+        margin: auto;
+        height: 26px;
         display: block;
-        height: 2px;
-        width: 100%;
-        background-color: #fff;
-        margin-bottom: 2px;
-        transition: .5s all;
     }
 
     header .inner {
