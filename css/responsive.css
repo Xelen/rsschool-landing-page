@@ -126,9 +126,10 @@
 
     .menu-hamburger span {
         display: block;
-        height: 2px;
+        height: 1.6px;
+        border-radius: 10px;
         width: 100%;
-        background: url(../icons/line.svg) center no-repeat;
+        background-color: #403F3D;
         transition: .5s all;
     }
 
