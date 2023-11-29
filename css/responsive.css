@@ -120,21 +120,22 @@
         display: none;
     }
 
-    /* .menu-hamburger {
+    .menu-hamburger {
         display: block;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 12px;
-    } */
+    }
 
-    /* .menu-hamburger span {
+    .menu-hamburger span {
         display: block;
-        height: 1.5px;
+        height: 2px;
         width: 100%;
-        background-color: #403F3D;
-        margin-bottom: 8px;
+        background: url(../icons/line.svg) center no-repeat;
         transition: .5s all;
-    } */
+    }
+
+    .hamburger-btn>span:nth-child(1) {
+        margin-bottom: 8px;
+    }
+
     .menu-hamburger {
         display: flex;
         width: 44px;
@@ -146,7 +147,7 @@
 
     .hamburger-btn {
         margin: auto;
-        height: 26px;
+        width: 16px;
         display: block;
     }
 
