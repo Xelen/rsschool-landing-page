@@ -7,6 +7,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    /* border: 2px solid red */
 }
 
 ::after,
@@ -134,7 +135,6 @@ button {
     position: relative;
 }
 
-
 a {
     color: #403F3D;
     text-decoration: none;
@@ -245,20 +245,19 @@ section {
 }
 
 #enjoy {
-    /* background-image: url('../img/img-hero.jpg'); */
+    /* background-image: url('../img/img-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
-
-    border-radius: 40px;
+    border-radius: 40px; */
     color: #E1D4C9;
     margin-top: 2.5px;
     width: 100%;
 }
 
 #enjoy .promo-text {
-    padding: 102px 0px 101px 100px;
+    padding: 102px 100px 101px 100px;
 }
 
 .video-block {
@@ -271,6 +270,8 @@ section {
 
 .enjoy-video {
     position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 40px;
     width: 100%;
     height: 100%;
@@ -308,6 +309,11 @@ section {
 
 #favorite-coffee .slider {
     position: relative;
+}
+
+#favorite-coffee .slider img,
+#mobile-app img {
+    width: 100%;
 }
 
 .nav-next,

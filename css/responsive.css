@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 800px) {
     #enjoy .promo-text {
-        padding: 100px 0px 100px 60px;
+        padding: 100px 60px 100px 60px;
     }
 
     #enjoy h1 {
@@ -225,5 +225,40 @@
 
     #top-menu>ul {
         padding: 0;
+    }
+}
+
+@media screen and (min-width: 530px) and (max-width: 740px) {
+    #enjoy .promo-text {
+        padding: 80px 20px 80px 20px;
+    }
+
+    h1.mobile {
+        font-size: 52px;
+        line-height: 125%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .body-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+    }
+
+    #enjoy .promo-text {
+        padding: 60px 16px 60px 16px;
+    }
+
+    h1.mobile {
+        font-size: 42px;
+        line-height: 115%;
+    }
+}
+
+@media screen and (max-width: 367px) {
+    h1.mobile {
+        font-size: 34px;
+        line-height: 115%;
     }
 }
