@@ -123,13 +123,17 @@
         display: none;
     }
 
+    .menu-burger {
+        transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+    }
+
     .menu-burger span {
         display: block;
         height: 1.6px;
         border-radius: 10px;
         width: 100%;
         background-color: #403F3D;
-        transition: .5s all;
+        transition: background 0.5s ease-in-out;
     }
 
     .burger-btn>span:nth-child(1) {
@@ -236,13 +240,9 @@
         margin: 0 10px 0 0;
         padding: 10px;
     }
-
-    #top-menu>ul {
-        /* padding: 0 0 0 10px; */
-    }
 }
 
-@media screen and (min-width: 530px) and (max-width: 740px) {
+@media screen and (min-width: 531px) and (max-width: 740px) {
     #enjoy .promo-text {
         padding: 80px 20px 80px 20px;
     }
@@ -275,7 +275,7 @@
     }
 
     #mobile-app button {
-        margin-right: 0px;
+        margin-right: 8px;
         margin-bottom: 20px;
     }
 
@@ -351,5 +351,10 @@
     h1.mobile {
         font-size: 34px;
         line-height: 115%;
+    }
+
+    h2.mobile {
+        font-size: 24px;
+        line-height: 125%;
     }
 }
