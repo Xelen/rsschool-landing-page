@@ -3,6 +3,18 @@
         padding: 100px 60px 100px 60px;
     }
 
+    #menu .menu-tabs li.coffe-tab {
+        padding: 8px 16px 7px 7px;
+    }
+
+    #contacts>div:nth-child(1)>h2 {
+        margin: 0 0 40px 0;
+    }
+
+    #menu {
+        margin-bottom: 100px;
+    }
+
     #enjoy h1 {
         margin: 0 0 42px 0;
     }
@@ -26,7 +38,7 @@
     }
 
     #about .gallery .image-box img {
-        transform: scale(1.05);
+        transform: scale(1.055);
     }
 
     #about .gallery {
@@ -71,6 +83,7 @@
 
     #menu .menu-block .item {
         width: calc(100% / 2);
+        min-height: 546px;
     }
 
     #menu .menu-block .item.tablet-none,
@@ -90,7 +103,6 @@
 
     .refresh-icon svg {
         margin: auto;
-        width: 20px;
         display: block;
         top: 17px;
         position: relative;
@@ -102,6 +114,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    #menu .menu-block {
+        margin: 0 -6px;
+    }
 
     #top-menu,
     #menu-link {
@@ -219,10 +234,11 @@
 
     #top-menu ul>li {
         margin: 0 10px 0 0;
+        padding: 10px;
     }
 
     #top-menu>ul {
-        padding: 0;
+        /* padding: 0 0 0 10px; */
     }
 }
 
@@ -251,6 +267,41 @@
     h1.mobile {
         font-size: 42px;
         line-height: 115%;
+    }
+
+    h2.mobile {
+        font-size: 32px;
+        line-height: 125%;
+    }
+
+    #mobile-app button {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    #enjoy p {
+        margin: 0 0 38px 0;
+    }
+
+    #mobile-app>div:nth-child(1) {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+    #contacts {
+        padding: 61px 16px 46px;
+    }
+
+    #contacts .blocks {
+        padding-right: 0;
+    }
+
+    #contacts>div:nth-child(2) {
+        padding: 41px 0 0 0px;
+    }
+
+    #about .gallery .image-box img {
+        transform: scale(1.23);
     }
 }
 
