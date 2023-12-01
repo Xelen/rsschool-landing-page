@@ -1,3 +1,14 @@
+@media screen and (min-width: 381px) and (max-width: 760px) {
+    h1.mobile {
+        font-size: clamp(42px, 8vw, 72px);
+    }
+
+    h2.mobile {
+        font-size: clamp(32px, 8vw, 60px);
+    }
+}
+
+
 @media screen and (max-width: 800px) {
     #enjoy .promo-text {
         padding: 100px 60px 100px 60px;
@@ -8,14 +19,6 @@
     #enjoy .promo-text {
         padding: 100px 40px 100px 40px;
     }
-
-    h1.mobile {
-        font-size: 68px;
-    }
-
-    h2.mobile {
-        font-size: 56px;
-    }
 }
 
 @media screen and (max-width: 650px) {
@@ -24,26 +27,13 @@
     }
 
     h1.mobile {
-        font-size: 60px;
         line-height: 115%;
-    }
-
-    h2.mobile {
-        font-size: 48px;
     }
 }
 
 @media screen and (max-width: 570px) {
     #enjoy .promo-text {
         padding: 80px 25px 80px 25px;
-    }
-
-    h1.mobile {
-        font-size: 56px;
-    }
-
-    h2.mobile {
-        font-size: 44px;
     }
 
     .nav-prev,
@@ -56,60 +46,15 @@
     #enjoy .promo-text {
         padding: 60px 16px 60px 16px;
     }
-
-    h1.mobile {
-        font-size: 48px;
-    }
-
-    h2.mobile {
-        font-size: 36px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    h1.mobile {
-        font-size: 44px;
-    }
-
-    h2.mobile {
-        font-size: 32px;
-        line-height: 125%;
-    }
 }
 
 @media screen and (max-width: 380px) {
     h1.mobile {
-        font-size: 42px;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    h1.mobile {
-        font-size: 38px;
+        font-size: clamp(30px, 8vw, 42px);
     }
 
     h2.mobile {
-        font-size: 28px;
-    }
-}
-
-@media screen and (max-width: 340px) {
-    h1.mobile {
-        font-size: 34px;
-    }
-
-    h2.mobile {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 310px) {
-    h1.mobile {
-        font-size: 28px;
-    }
-
-    h2.mobile {
-        font-size: 20px;
+        font-size: clamp(26px, 8vw, 32px);
     }
 }
 
@@ -170,8 +115,6 @@
     }
 
     #about .gallery .image-box.image2 {
-        /* grid-column: 1;
-        grid-row: 1; */
         display: none;
     }
 
@@ -181,8 +124,6 @@
     }
 
     #about .gallery .image-box.image4 {
-        /* grid-column: 1;
-        grid-row: 1; */
         display: none;
     }
 
