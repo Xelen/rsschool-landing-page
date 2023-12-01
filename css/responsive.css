@@ -2,6 +2,119 @@
     #enjoy .promo-text {
         padding: 100px 60px 100px 60px;
     }
+}
+
+@media screen and (max-width: 720px) {
+    #enjoy .promo-text {
+        padding: 100px 40px 100px 40px;
+    }
+
+    h1.mobile {
+        font-size: 68px;
+    }
+
+    h2.mobile {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #enjoy .promo-text {
+        padding: 100px 30px 100px 30px;
+    }
+
+    h1.mobile {
+        font-size: 60px;
+        line-height: 115%;
+    }
+
+    h2.mobile {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #enjoy .promo-text {
+        padding: 80px 25px 80px 25px;
+    }
+
+    h1.mobile {
+        font-size: 56px;
+    }
+
+    h2.mobile {
+        font-size: 44px;
+    }
+
+    .nav-prev,
+    .nav-next {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #enjoy .promo-text {
+        padding: 60px 16px 60px 16px;
+    }
+
+    h1.mobile {
+        font-size: 48px;
+    }
+
+    h2.mobile {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1.mobile {
+        font-size: 44px;
+    }
+
+    h2.mobile {
+        font-size: 32px;
+        line-height: 125%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h1.mobile {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    h1.mobile {
+        font-size: 38px;
+    }
+
+    h2.mobile {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    h1.mobile {
+        font-size: 34px;
+    }
+
+    h2.mobile {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    h1.mobile {
+        font-size: 28px;
+    }
+
+    h2.mobile {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
 
     #menu .menu-tabs li.coffe-tab {
         padding: 8px 16px 7px 7px;
@@ -163,7 +276,7 @@
 
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
     .menu-hamburger,
     .refresh {
@@ -181,7 +294,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
     #mobile-app .blocks {
         width: 100%;
     }
@@ -196,7 +309,7 @@
     }
 }
 
-@media screen and (min-width: 1101px) and (max-width: 1350px) {
+@media screen and (min-width: 1100px) and (max-width: 1350px) {
     #contacts>div:nth-child(1) {
         width: 65%;
     }
@@ -242,36 +355,11 @@
     }
 }
 
-@media screen and (min-width: 531px) and (max-width: 740px) {
-    #enjoy .promo-text {
-        padding: 80px 20px 80px 20px;
-    }
-
-    h1.mobile {
-        font-size: 52px;
-        line-height: 125%;
-    }
-}
-
 @media screen and (max-width: 530px) {
     .body-wrapper {
         padding-left: 16px;
         padding-right: 16px;
         padding-bottom: 16px;
-    }
-
-    #enjoy .promo-text {
-        padding: 60px 16px 60px 16px;
-    }
-
-    h1.mobile {
-        font-size: 42px;
-        line-height: 115%;
-    }
-
-    h2.mobile {
-        font-size: 32px;
-        line-height: 125%;
     }
 
     #mobile-app button {
@@ -289,7 +377,7 @@
     }
 
     #contacts {
-        padding: 61px 16px 46px;
+        padding: 61px 30px 46px;
     }
 
     #contacts .blocks {
@@ -347,14 +435,8 @@
     }
 }
 
-@media screen and (max-width: 367px) {
-    h1.mobile {
-        font-size: 34px;
-        line-height: 115%;
-    }
-
-    h2.mobile {
-        font-size: 24px;
-        line-height: 125%;
+@media screen and (max-width: 380px) {
+    #contacts {
+        padding: 61px 16px 46px;
     }
 }

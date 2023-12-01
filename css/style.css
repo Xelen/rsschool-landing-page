@@ -257,12 +257,12 @@ section {
 }
 
 #enjoy {
-    /* background-image: url('../img/img-hero1.jpg');
+    background-image: url('../img/img-hero1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
-    border-radius: 40px; */
+    border-radius: 40px;
     color: #E1D4C9;
     margin-top: 2.5px;
     width: 100%;
@@ -826,11 +826,10 @@ h1.menu-title {
 }
 
 @media (hover: hover) {
-    menu .menu-tabs li:hover i {
+    #menu .menu-tabs li:hover i {
         background: #E1D4C9;
         position: relative;
         transition: background 0.6s ease-in-out;
-
     }
 }
 
