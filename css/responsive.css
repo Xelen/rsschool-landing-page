@@ -8,7 +8,6 @@
     }
 }
 
-
 @media screen and (max-width: 800px) {
     #enjoy .promo-text {
         padding: 100px 60px 100px 60px;
@@ -155,6 +154,20 @@
 
     .refresh {
         margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (hover: hover) {
+    .refresh-icon:hover svg path {
+        stroke: #E1D4C9;
+        transition: background 0.5s ease-in-out, border 0.5s ease-in-out, color 0.5s ease-in-out;
+    }
+
+    .refresh-icon:hover {
+        background-color: #665F55;
+        transition: background 0.5s ease-in-out, border 0.5s ease-in-out, color 0.5s ease-in-out;
     }
 }
 
@@ -268,7 +281,7 @@
     }
 
     .menu-block {
-        justify-content: center;
+        /* justify-content: center; */
     }
 }
 
@@ -279,7 +292,7 @@
     }
 
     .menu-block {
-        justify-content: center;
+        /* justify-content: center; */
     }
 }
 
@@ -419,5 +432,22 @@
 @media screen and (max-width: 380px) {
     #contacts {
         padding: 61px 16px 46px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    #menu .menu-tabs li {
+        margin: 0 5px 0 0;
+    }
+
+    #menu .menu-tabs {
+        padding: 0;
+        margin: 0 -10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #menu .menu-tabs li {
+        margin-bottom: 10px;
     }
 }
