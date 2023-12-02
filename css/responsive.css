@@ -1,4 +1,4 @@
-@media screen and (min-width: 381px) and (max-width: 760px) {
+@media screen and (min-width: 380px) and (max-width: 760px) {
     h1.mobile {
         font-size: clamp(42px, 8vw, 72px);
     }
@@ -47,7 +47,7 @@
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 379px) {
     h1.mobile {
         font-size: clamp(30px, 11vw, 42px);
     }
@@ -66,10 +66,6 @@
 
     #contacts>div:nth-child(1)>h2 {
         margin: 0 0 40px 0;
-    }
-
-    #menu {
-        margin-bottom: 100px;
     }
 
     #enjoy h1 {
@@ -245,7 +241,7 @@
     }
 
     .refresh {
-        margin-top: 20px;
+        margin: 20px 0 19px;
         width: 100%;
         justify-content: center;
     }
