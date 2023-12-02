@@ -129,34 +129,6 @@
         width: calc(100% / 2);
         min-height: 546px;
     }
-
-    #menu .menu-block .item.tablet-none,
-    #menu .menu-block .item.mobile-none {
-        display: none;
-    }
-
-    .refresh-icon {
-        width: 60px;
-        height: 60px;
-        display: block;
-        margin: 0 auto;
-        border: 1px solid #665F55;
-        border-radius: 50px;
-        cursor: pointer;
-    }
-
-    .refresh-icon svg {
-        margin: auto;
-        display: block;
-        top: 17px;
-        position: relative;
-    }
-
-    .refresh {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
-    }
 }
 
 @media (hover: hover) {
@@ -241,10 +213,47 @@
 
 }
 
+@media screen and (min-width: 1301px) {
+
+    .refresh {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    #menu .menu-block .item.mobile-none {
+        display: none;
+    }
+
+    .refresh-icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #665F55;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .refresh-icon svg {
+        margin: auto;
+        display: block;
+        top: 17px;
+        position: relative;
+    }
+
+    .refresh {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 769px) {
 
-    .menu-hamburger,
-    .refresh {
+    .menu-hamburger {
         display: none;
     }
 }
@@ -274,14 +283,22 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1300px) {
     #menu .menu-block .item {
         width: calc(100% / 3);
         max-width: 352px;
     }
 
+    .mobile-none {
+        display: flex !important;
+    }
+
+    .three-col.mobile-none {
+        display: none !important;
+    }
+
     .menu-block {
-        /* justify-content: center; */
+        justify-content: center;
     }
 }
 
@@ -292,7 +309,7 @@
     }
 
     .menu-block {
-        /* justify-content: center; */
+        justify-content: center;
     }
 }
 
@@ -442,7 +459,7 @@
 
     #menu .menu-tabs {
         padding: 0;
-        margin: 0 -10px;
+        margin: 0 -10px 20px;
     }
 }
 
