@@ -121,10 +121,6 @@
         width: 100%;
     }
 
-    #menu .menu-block .item {
-        width: calc(100% / 2);
-        min-height: 546px;
-    }
 }
 
 @media (hover: hover) {
@@ -162,6 +158,10 @@
 @media screen and (max-width: 768px) {
     #menu .menu-block {
         margin: 0 -6px;
+    }
+
+    #menu .menu-block .item.mobile-none {
+        display: none;
     }
 
     #top-menu,
@@ -209,7 +209,7 @@
 
 }
 
-@media screen and (min-width: 1301px) {
+@media screen and (min-width: 769px) {
 
     .refresh {
         display: none;
@@ -218,10 +218,6 @@
 }
 
 @media screen and (max-width: 1300px) {
-
-    #menu .menu-block .item.mobile-none {
-        display: none;
-    }
 
     .refresh-icon {
         width: 60px;
@@ -279,46 +275,6 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1300px) {
-    #menu .menu-block .item {
-        width: calc(100% / 3);
-        max-width: 352px;
-    }
-
-    .mobile-none {
-        display: flex !important;
-    }
-
-    .three-col.mobile-none {
-        display: none !important;
-    }
-
-    .menu-block {
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 991px) {
-    #menu .menu-block .item {
-        width: calc(100% / 2);
-        max-width: 352px;
-    }
-
-    .menu-block {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 680px) {
-    #menu .menu-block .item {
-        width: 100%;
-        max-width: 352px;
-    }
-
-    .menu-block {
-        justify-content: center;
-    }
-}
 
 @media screen and (min-width: 1100px) and (max-width: 1350px) {
     #contacts>div:nth-child(1) {
@@ -462,5 +418,28 @@
 @media screen and (max-width: 350px) {
     #menu .menu-tabs li {
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .products {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-block {
+        max-width: 1050px;
+    }
+}
+
+@media screen and (max-width: 1089px) {
+    .menu-block {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu-block {
+        max-width: 350px;
     }
 }

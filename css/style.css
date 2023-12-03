@@ -10,6 +10,15 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+}
+
 ::after,
 ::before {
     box-sizing: border-box;
@@ -605,7 +614,8 @@ footer .footer-contacts ul li svg {
 #menu .menu-block .item {
     padding: 20px;
     box-sizing: border-box;
-    width: calc(100% / 4);
+    max-width: 350px;
+    height: 546px;
     display: flex;
 }
 
