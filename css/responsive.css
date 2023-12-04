@@ -250,6 +250,19 @@
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    #mobile-app>div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    #mobile-app .promo-text {
+        text-align: center;
+    }
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1300px) {
     #mobile-app>div:nth-child(2)>img:nth-child(1) {
         width: 85%;
