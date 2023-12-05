@@ -3,8 +3,6 @@
         position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         top: 90px;
         left: 100%;
         width: 50%;
@@ -21,7 +19,7 @@
     }
 
     #top-menu>ul {
-        position: absolute;
+        position: relative;
         top: 0;
         display: flex;
         flex-direction: column;
@@ -31,11 +29,28 @@
 
     #top-menu.topmenu-active #menu-link {
         display: inherit;
+        justify-content: center;
         flex-basis: auto;
     }
 
+    #top-menu.topmenu-active #menu-link .cup-text {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+        left: 1px;
+    }
+
     #top-menu.topmenu-active ul {
-        padding: 0;
+        padding: 25px 0 26px 12px;
+    }
+
+    #top-menu.topmenu-active #menu-link .coffe-icon {
+        top: 7px;
+        margin-left: 13px;
+    }
+
+    #top-menu.topmenu-active ul>li {
+        margin: 0 12px 40px 0;
     }
 
     .burger-btn span {

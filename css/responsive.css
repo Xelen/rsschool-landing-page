@@ -127,6 +127,10 @@
         transform: scale(1.055);
     }
 
+    .coffe-icon.dmenu {
+        display: none;
+    }
+
     .burger-link {
         font-size: 32px;
         font-weight: 600;
@@ -220,7 +224,8 @@
 
 @media screen and (min-width: 769px) {
 
-    .refresh {
+    .refresh,
+    .coffe-icon.mobmenu {
         display: none;
     }
 
