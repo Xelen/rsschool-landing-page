@@ -263,11 +263,11 @@ section {
 }
 
 #enjoy {
-    background-image: url('../img/img-hero1.jpg');
+    /* background-image: url('../img/img-hero1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: center;
+    background-position: center; */
     border-radius: 40px;
     color: #E1D4C9;
     margin-top: 2.5px;

@@ -1,5 +1,14 @@
 @media screen and (max-width: 768px) {
     #top-menu {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #top-menu.topmenu-active {
+        opacity: 1;
+    }
+
+    #top-menu {
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -40,7 +49,7 @@
         left: 1px;
     }
 
-    #top-menu.topmenu-active ul {
+    #top-menu ul {
         padding: 25px 0 26px 12px;
     }
 
