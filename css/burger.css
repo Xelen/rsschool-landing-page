@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    #top-menu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 90px;
+        left: 100%;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: #E1D4C9;
+        transition: .6s all;
+        z-index: 5;
+    }
+
+    #top-menu.topmenu-active {
+        left: 0;
+        width: 100%;
+    }
+
+    #top-menu>ul {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

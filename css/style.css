@@ -48,6 +48,7 @@ body {
     font-weight: 400;
     margin: 0;
     font-size: 16px;
+    min-width: 320px;
 }
 
 h1 {
@@ -202,7 +203,7 @@ a {
     padding-left: 6px;
     display: inherit;
     text-align: left;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 .button-google-play .text {
@@ -214,14 +215,13 @@ a {
 
 
 #mobile-app button svg path {
-    stroke: #403F3D;
+
     fill: #403F3D;
     transition: fill 0.5s ease, stroke 0.5s ease;
 }
 
 @media (hover: hover) {
     #mobile-app button:hover svg path {
-        stroke: #E1D4C9;
         fill: #E1D4C9;
         transition: fill 0.5s ease, stroke 0.5s ease;
     }
