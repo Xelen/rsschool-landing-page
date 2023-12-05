@@ -28,4 +28,34 @@
         justify-content: center;
         align-items: center;
     }
+
+    #top-menu.topmenu-active #menu-link {
+        display: inherit;
+        flex-basis: auto;
+    }
+
+    #top-menu.topmenu-active ul {
+        padding: 0;
+    }
+
+    .burger-btn span {
+        transition: .5s all;
+    }
+
+    .burger-active .burger-btn span:nth-child(1),
+    .burger-active .burger-btn span:nth-child(2) {
+        margin-bottom: -2px;
+    }
+
+    .burger-active span:nth-child(1) {
+        transform: translateY(5px) rotate(-45deg);
+        transition: .5s all;
+        height: 2px
+    }
+
+    .burger-active span:nth-child(2) {
+        transform: translateY(5px) rotate(45deg);
+        transition: .5s all;
+        height: 2px
+    }
 }

@@ -1,7 +1,13 @@
 window.addEventListener('DOMContentLoaded', () => {
     const topmenu = document.querySelector('#top-menu'),
-        topMenuItem = document.querySelectorAll('#top-menu > ul > li'),
-        burger = document.querySelector('.menu-burger');
+        topMenuItem = document.querySelectorAll('.top-link'),
+        topMenuItemLink = document.querySelectorAll('.top-link a'),
+        burger = document.querySelector('.menu-burger'),
+        menuLink = document.querySelector('#menu-link');
+
+    topMenuItemLink.forEach(item => {
+        item.classList.add('burger-link');
+    });
 
     function toggleMenu() {
         burger.classList.toggle('burger-active');
@@ -10,8 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
         // Body scroll off
         if (burger.classList.contains('burger-active')) {
             document.body.style.overflow = 'hidden';
+            topmenu.querySelector('#top-menu > ul').after(menuLink);
         } else {
             document.body.style.overflow = '';
+            document.querySelector('.inner').appendChild(menuLink);
         }
     }
 
@@ -24,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             // Body scroll on
             document.body.style.overflow = '';
+            document.querySelector('.inner').appendChild(menuLink);
         });
     });
 });

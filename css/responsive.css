@@ -127,6 +127,12 @@
         transform: scale(1.055);
     }
 
+    .burger-link {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+    }
+
     #about .gallery {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -179,7 +185,7 @@
         border-radius: 10px;
         width: 100%;
         background-color: #403F3D;
-        transition: background 0.5s ease-in-out;
+        transition: .5s all;
     }
 
     .burger-btn>span:nth-child(1) {
@@ -201,6 +207,9 @@
         margin: auto;
         width: 18px;
         display: block;
+        position: absolute;
+        top: 39%;
+        left: 30%;
     }
 
     header .inner {
@@ -322,7 +331,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 769px) and (max-width: 900px) {
 
     #top-menu>ul>li>a,
     #menu-link .cup-text {
