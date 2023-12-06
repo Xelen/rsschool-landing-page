@@ -1,0 +1,120 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+    // event (sizes and additives)
+    document.addEventListener('change', function (event) {
+        const target = event.target;
+
+        // radio button or checkbox
+        if (target.type === 'radio' || target.type === 'checkbox') {
+            updatePrice(target);
+        }
+    });
+
+    // product card clicks
+    document.addEventListener('click', function (event) {
+        const target = event.target;
+
+        // Check click event on a product card
+        if (target.closest('.product-thumb')) {
+            const productCard = target.closest('.item');
+            displayModal(productCard);
+        }
+    });
+
+    // display modal with product details
+    function displayModal(productCard) {
+        const modal = document.getElementById('productModal');
+        const modalContent = modal.querySelector('.modal-content');
+
+        // extract product details
+        const productName = productCard.querySelector('.name h3').textContent;
+        const productDescription = productCard.querySelector('.description').textContent;
+        const productImageSrc = productCard.querySelector('.image img').src;
+        const productSizes = productCard.querySelector('.sizes');
+        const productAdditives = productCard.querySelector('.additives');
+        const productBasePrice = parseFloat(productCard.dataset.price);
+
+        // HTML to the modal content
+        const modalHTML = `
+        <div class="product-details">
+            <span class="close">&times;</span>
+            <div class="image"><img src="${productImageSrc}" alt="${productName}"></div>
+            <div class="name">
+                <h3>${productName}</h3>
+            </div>
+            <div class="description">${productDescription}</div>
+            ${productSizes ? productSizes.outerHTML : ''}
+            ${productAdditives ? productAdditives.outerHTML : ''}
+            <div class="total-price">Total Price: $${productBasePrice.toFixed(2)}</div>
+        </div>
+    `;
+
+        // update modal content
+        modalContent.innerHTML = modalHTML;
+
+        // display modal
+        modal.style.display = 'block';
+
+        // body scrolling off
+        document.body.classList.add('modal-open');
+
+        // click outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        const closeButton = modal.querySelector('.close');
+        closeButton.addEventListener('click', closeModal);
+
+        // changes in sizes and additives
+        const sizesRadioButtons = modalContent.querySelectorAll('.sizes input[type=radio]');
+        const additivesCheckboxes = modalContent.querySelectorAll('.additives input[type=checkbox]');
+
+        const updateTotal = () => {
+            updateTotalPrice(productBasePrice, sizesRadioButtons, additivesCheckboxes, modalContent);
+        };
+
+        sizesRadioButtons.forEach(size => size.addEventListener('change', updateTotal));
+        additivesCheckboxes.forEach(additive => additive.addEventListener('change', updateTotal));
+    }
+
+    // update the total price
+    function updateTotalPrice(basePrice, sizes, additives, modalContent) {
+        let totalPrice = basePrice;
+
+        // update price based on sizes
+        sizes.forEach(size => {
+            if (size.checked) {
+                const sizeAddPrice = parseFloat(size.dataset.addPrice);
+                totalPrice += sizeAddPrice;
+            }
+        });
+
+        // update price based on additives
+        additives.forEach(additive => {
+            if (additive.checked) {
+                const additiveAddPrice = parseFloat(additive.dataset.addPrice);
+                totalPrice += additiveAddPrice;
+            }
+        });
+
+        // display updated total price
+        const totalPriceElement = modalContent.querySelector('.total-price');
+        if (totalPriceElement) {
+            totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+        }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('productModal');
+        const modalContent = modal.querySelector('.modal-content');
+
+        // body scrolling on
+        document.body.classList.remove('modal-open');
+
+        modal.style.display = 'none';
+        modalContent.innerHTML = '';
+    }
+});

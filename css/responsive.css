@@ -237,7 +237,7 @@
         width: 60px;
         height: 60px;
         display: block;
-        margin: 0 auto;
+        margin: 20px auto 19px;
         border: 1px solid #665F55;
         border-radius: 50px;
         cursor: pointer;
@@ -246,7 +246,6 @@
     .refresh-icon svg {
         margin: auto;
         display: block;
-        top: 17px;
         position: relative;
     }
 
