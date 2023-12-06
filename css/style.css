@@ -891,8 +891,29 @@ h1.menu-title {
     cursor: default;
 }
 
-#menu-page #menu-link .menu-btn::after {
+#menu-page #menu-link .menu-btn::after,
+#menu-page .mlink::after {
     width: 100%;
+}
+
+#top-menu ul>li.mlink {
+    padding: 0 0 3px 0;
+    margin: 41px 0 0 !important;
+}
+
+.mlink .coffe-icon {
+    position: relative;
+    left: -12px;
+    top: 7px;
+}
+
+.menu-btn.mlink::after {
+    left: 45%;
+}
+
+.mlink .cup-text {
+    position: relative;
+    margin-right: 28px;
 }
 
 #menu-page #menu-link .menu-btn {

@@ -131,7 +131,8 @@
         display: none;
     }
 
-    .burger-link {
+    .burger-link,
+    .mlink {
         font-size: 32px;
         font-weight: 600;
         line-height: 125%;
@@ -225,7 +226,7 @@
 @media screen and (min-width: 769px) {
 
     .refresh,
-    .coffe-icon.mobmenu {
+    #top-menu .mlink {
         display: none;
     }
 

@@ -20,6 +20,7 @@
         background-color: #E1D4C9;
         transition: .6s all;
         z-index: 5;
+        overflow-y: scroll;
     }
 
     #top-menu.topmenu-active {
@@ -40,13 +41,14 @@
         display: inherit;
         justify-content: center;
         flex-basis: auto;
+        margin: 41px 0 0 0;
     }
 
     #top-menu.topmenu-active #menu-link .cup-text {
         font-size: 32px;
         font-weight: 600;
         line-height: 125%;
-        left: 1px;
+        left: -11px;
     }
 
     #top-menu ul {
@@ -54,8 +56,8 @@
     }
 
     #top-menu.topmenu-active #menu-link .coffe-icon {
-        top: 7px;
-        margin-left: 13px;
+        top: -1px;
+        margin-left: 5px;
     }
 
     #top-menu.topmenu-active ul>li {
