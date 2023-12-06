@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', () => {
         topMenuItem = document.querySelectorAll('.top-link'),
         topMenuItemLink = document.querySelectorAll('.top-link a'),
         burger = document.querySelector('.menu-burger');
-    // menuLink = document.querySelector('#menu-link');
 
     topMenuItemLink.forEach(item => {
         item.classList.add('burger-link');
@@ -16,15 +15,19 @@ window.addEventListener('DOMContentLoaded', () => {
         // Body scroll off
         if (burger.classList.contains('burger-active')) {
             document.body.style.overflow = 'hidden';
-            // topmenu.querySelector('#top-menu > ul').after(menuLink);
 
         } else {
             document.body.style.overflow = '';
-            // document.querySelector('.inner').appendChild(menuLink);
         }
     }
 
-    burger.addEventListener('click', toggleMenu);
+    burger.addEventListener('click', () => {
+        toggleMenu();
+        // scroll to top when menu is opened
+        if (burger.classList.contains('burger-active')) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
 
     topMenuItem.forEach(item => {
         item.addEventListener('click', () => {
@@ -33,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             // Body scroll on
             document.body.style.overflow = '';
-            // document.querySelector('.inner').appendChild(menuLink);
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
 });

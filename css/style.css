@@ -311,25 +311,25 @@ section {
     margin-top: 3px;
 }
 
-#favorite-coffee .product {
+#favorite-coffee .carousel-item {
     max-width: 480px;
     margin: 0 auto 40px;
 }
 
-#favorite-coffee .product img {
+#favorite-coffee .carousel-item .img img {
     max-width: 480px;
     margin-bottom: 12px;
 }
 
-#favorite-coffee .product .text {
+#favorite-coffee .carousel-item .text {
     margin-bottom: 17px;
 }
 
-#favorite-coffee .slider {
+#favorite-coffee .carousel {
     position: relative;
 }
 
-#favorite-coffee .slider img,
+#favorite-coffee .carousel img,
 #mobile-app img {
     width: 100%;
 }

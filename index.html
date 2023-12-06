@@ -10,6 +10,7 @@
     <title>Coffee House</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +27,7 @@
                 </div>
 
                 <div id="top-menu" class="">
+
                     <ul>
                         <li class="top-link"><a class="menu-btn" href="#favorite-coffee">Favorite coffee</a></li>
                         <li class="top-link"><a class="menu-btn" href="#about">About</a></li>
@@ -131,26 +133,52 @@
             </section>
             <section id="favorite-coffee">
                 <h2 class="mobile">Choose your <span class="accent">favorite</span> coffee</h2>
-                <div class="slider">
-                    <div class="product">
-                        <div class="img"><img src="img/coffee-slider-1.png" alt="S’mores Frappuccino"></div>
-                        <h3>S’mores Frappuccino</h3>
-                        <div class="text">This new drink takes an espresso and mixes it with brown sugar and cinnamon
-                            before
-                            being topped with oat milk.</div>
-                        <div class="price">
-                            <h3>$5.50</h3>
+                <div class="carousel-container">
+                    <div class="carousel" id="image-carousel">
+                        <div class="carousel-item">
+                            <div class="img"><img src="img/coffee-slider-1.png" alt="S’mores Frappuccino"></div>
+                            <h3>S’mores Frappuccino</h3>
+                            <div class="text">This new drink takes an espresso and mixes it with brown sugar and
+                                cinnamon
+                                before
+                                being topped with oat milk.</div>
+                            <div class="price">
+                                <h3>$5.50</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img"><img src="img/coffee-slider-2.png" alt="S’mores Frappuccino"></div>
+                            <h3>S’mores Frappuccino</h3>
+                            <div class="text">This new drink takes an espresso and mixes it with brown sugar and
+                                cinnamon
+                                before
+                                being topped with oat milk.</div>
+                            <div class="price">
+                                <h3>$5.50</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img"><img src="img/coffee-slider-3.png" alt="S’mores Frappuccino"></div>
+                            <h3>S’mores Frappuccino</h3>
+                            <div class="text">This new drink takes an espresso and mixes it with brown sugar and
+                                cinnamon
+                                before
+                                being topped with oat milk.</div>
+                            <div class="price">
+                                <h3>$5.50</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="nav-next btn">
+
+                    <div class="nav-prev btn" id="prevBtn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round"
+                            <path d="M18 12H5.5M5.5 12L11.5 18M5.5 12L11.5 6" stroke="#403F3D" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div class="nav-prev btn">
+                    <div class="nav-next btn" id="nextBtn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 12H5.5M5.5 12L11.5 18M5.5 12L11.5 6" stroke="#403F3D" stroke-linecap="round"
+                            <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -161,6 +189,7 @@
                             <div class="bar-item"></div>
                         </div>
                     </div>
+
                 </div>
 
             </section>
@@ -315,6 +344,7 @@
         </footer>
     </div>
     <script src="js/burger.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
