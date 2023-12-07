@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ${productSizes ? productSizes.outerHTML : ''}
             ${productAdditives ? productAdditives.outerHTML : ''}
             <div class="total-price"><div><h3>Total:</h3></div><div><h3>$${productBasePrice.toFixed(2)}</h3></div></div>
-            <div class="info">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</div>
-            <span class="close">&times;</span>
+            <div class="caption">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</div>
+            <div class="close button">Close</div>
             </div>
         </div>
     `;

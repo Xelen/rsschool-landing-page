@@ -91,6 +91,12 @@
 }
 
 @media (hover: hover) {
+    .modal-info-wrapper .button:hover {
+        background: #665F55;
+        color: #E1D4C9;
+        border: 1px solid #665F55;
+    }
+
     .refresh-icon:hover svg path {
         stroke: #E1D4C9;
         transition: background 0.5s ease-in-out, border 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -241,8 +247,8 @@
         flex-wrap: wrap;
     }
 
-    #productModal .modal-content .product-details>div {
-        max-width: 50%;
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        max-width: 440px;
     }
 
     #productModal .modal-content .product-details .image {
@@ -330,8 +336,28 @@
         margin-top: 3px;
     }
 
-    .total-price>div:nth-child(2) {
+    .modal-info-wrapper .total-price>div:nth-child(2) {
         text-align: right;
+    }
+
+    .modal-info-wrapper .total-price h3 {
+        margin: 0;
+    }
+
+    .modal-info-wrapper .caption {
+        padding: 12px 12px 12px 24px;
+        border-top: 1px solid #C1B6AD;
+        background-image: url('../icons/info.svg');
+        background-repeat: no-repeat;
+        background-position: 0 12px;
+    }
+
+    .modal-info-wrapper .close.button {
+        display: block;
+        text-align: center;
+        border: 1px solid #665F55;
+        border-radius: 100px;
+        padding: 12px;
     }
 }
 
