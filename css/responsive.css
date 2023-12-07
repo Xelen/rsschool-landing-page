@@ -230,6 +230,62 @@
         display: none;
     }
 
+    #productModal .modal-content {
+        max-width: 800px;
+        border-radius: 40px;
+        background-color: #E1D4C9;
+    }
+
+    #productModal .modal-content .product-details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #productModal .modal-content .product-details>div {
+        max-width: 50%;
+    }
+
+    #productModal .modal-content .product-details .image {
+        overflow: hidden;
+        border-radius: 40px;
+        height: 310px;
+        width: 310px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        padding-left: 20px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper .name h3 {
+        margin-bottom: 12px;
+    }
+
+
+    #productModal .modal-content .product-details .modal-info-wrapper .sizes p,
+    #productModal .modal-content .product-details .modal-info-wrapper .additives p {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper>div {
+        margin-bottom: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .button-label input:checked {
+        background: #D91E18;
+        color: #efefef;
+    }
+
+    .button-label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0em 1em 3px;
+        margin: 0.25em;
+    }
 }
 
 @media screen and (max-width: 1300px) {

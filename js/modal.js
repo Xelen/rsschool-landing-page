@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // HTML to the modal content
         const modalHTML = `
         <div class="product-details">
-            <span class="close">&times;</span>
             <div class="image"><img src="${productImageSrc}" alt="${productName}"></div>
+            <div class="modal-info-wrapper">
             <div class="name">
                 <h3>${productName}</h3>
             </div>
@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ${productSizes ? productSizes.outerHTML : ''}
             ${productAdditives ? productAdditives.outerHTML : ''}
             <div class="total-price">Total Price: $${productBasePrice.toFixed(2)}</div>
+            <span class="close">&times;</span>
+            </div>
         </div>
     `;
 
@@ -57,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const firstSizeRadioButton = modalContent.querySelector('.sizes input[type=radio]');
         if (firstSizeRadioButton) {
             firstSizeRadioButton.checked = true;
+
+            // checked attribute to the generated HTML
+            const firstSizeRadioInput = modalContent.querySelector('.sizes input[type=radio]:checked');
+            if (firstSizeRadioInput) {
+                firstSizeRadioInput.setAttribute('checked', 'checked');
+                const firstSizeParent = firstSizeRadioInput.parentElement;
+                firstSizeParent.classList.add('checked');
+            }
         }
 
         // display modal
@@ -93,24 +103,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // update price based on sizes
         sizes.forEach(size => {
+            const sizeParent = size.parentElement;
             if (size.checked) {
                 const sizeAddPrice = parseFloat(size.dataset.addPrice);
                 totalPrice += sizeAddPrice;
+                size.setAttribute('checked', 'checked');
+                sizeParent.classList.add('checked');
+            } else {
+                size.removeAttribute('checked');
+                sizeParent.classList.remove('checked');
             }
         });
 
         // update price based on additives
         additives.forEach(additive => {
+            const additiveParent = additive.parentElement;
             if (additive.checked) {
                 const additiveAddPrice = parseFloat(additive.dataset.addPrice);
                 totalPrice += additiveAddPrice;
+                additive.setAttribute('checked', 'checked');
+                additiveParent.classList.add('checked');
+            } else {
+                additive.removeAttribute('checked');
+                additiveParent.classList.remove('checked');
             }
         });
 
         // display updated total price
         const totalPriceElement = modalContent.querySelector('.total-price');
         if (totalPriceElement) {
-            totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+            totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
         }
     }
 

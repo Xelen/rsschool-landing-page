@@ -139,12 +139,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // generate HTML for sizes
     function generateSizesHTML(sizes) {
-        let sizesHTML = '<div class="sizes"><strong>Sizes:</strong>';
+        let sizesHTML = '<div class="sizes"><p>Size</p>';
         Object.keys(sizes).forEach(sizeKey => {
             const size = sizes[sizeKey];
             sizesHTML += `
-                <label>
-                    <input type="radio" name="size" value="${sizeKey}" data-add-price="${size['add-price']}">
+            <label class="button-label">
+                    <input class="hidden" type="radio" name="size" value="${sizeKey}" data-add-price="${size['add-price']}">
                     <span>${sizeKey}</span>${size.size} (+$${size['add-price']})
                 </label>
             `;
@@ -155,12 +155,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // generate HTML for additives
     function generateAdditivesHTML(additives) {
-        let additivesHTML = '<div class="additives"><strong>Additives:</strong>';
+        let additivesHTML = '<div class="additives"><p>Additives</p>';
         additives.forEach((additive, index) => {
             const additiveIndex = index + 1;  // Start numbering from 1
             additivesHTML += `
-                <label>
-                    <input type="checkbox" name="additive-${additive.name}" value="${additive.name}" data-add-price="${additive['add-price']}">
+                <label class="button-label">
+                    <input class="hidden" type="checkbox" name="additive-${additive.name}" value="${additive.name}" data-add-price="${additive['add-price']}">
                     ${additiveIndex}. ${additive.name} (+$${additive['add-price']})
                 </label>
             `;
