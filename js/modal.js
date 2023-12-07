@@ -52,6 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // update modal content
         modalContent.innerHTML = modalHTML;
 
+
+        // first radio button checked
+        const firstSizeRadioButton = modalContent.querySelector('.sizes input[type=radio]');
+        if (firstSizeRadioButton) {
+            firstSizeRadioButton.checked = true;
+        }
+
         // display modal
         modal.style.display = 'block';
 
