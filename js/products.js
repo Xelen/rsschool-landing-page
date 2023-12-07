@@ -139,33 +139,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // generate HTML for sizes
     function generateSizesHTML(sizes) {
-        let sizesHTML = '<div class="sizes"><p>Size</p>';
+        let sizesHTML = '<div class="sizes"><p>Size</p><div>';
         Object.keys(sizes).forEach(sizeKey => {
             const size = sizes[sizeKey];
             sizesHTML += `
-            <label class="button-label">
+            <label class="button">
                     <input class="hidden" type="radio" name="size" value="${sizeKey}" data-add-price="${size['add-price']}">
-                    <span>${sizeKey}</span>${size.size} (+$${size['add-price']})
+                    <span class="key">${sizeKey.toUpperCase()}</span><span class="select-option">${size.size}</span><span class="hidden">(+$${size['add-price']})</span>
                 </label>
             `;
         });
-        sizesHTML += '</div>';
+        sizesHTML += '</div></div>';
         return sizesHTML;
     }
 
     // generate HTML for additives
     function generateAdditivesHTML(additives) {
-        let additivesHTML = '<div class="additives"><p>Additives</p>';
+        let additivesHTML = '<div class="additives"><p>Additives</p><div>';
         additives.forEach((additive, index) => {
             const additiveIndex = index + 1;  // Start numbering from 1
             additivesHTML += `
-                <label class="button-label">
+                <label class="button">
                     <input class="hidden" type="checkbox" name="additive-${additive.name}" value="${additive.name}" data-add-price="${additive['add-price']}">
-                    ${additiveIndex}. ${additive.name} (+$${additive['add-price']})
+                    <span class="key">${additiveIndex}</span><span class="select-option">${additive.name}</span><span class="hidden">(+$${additive['add-price']})</span>
                 </label>
             `;
         });
-        additivesHTML += '</div>';
+        additivesHTML += '</div></div>';
         return additivesHTML;
     }
 

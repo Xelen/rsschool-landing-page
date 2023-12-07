@@ -267,6 +267,12 @@
         margin-bottom: 8px;
     }
 
+    #productModal .modal-content .product-details .modal-info-wrapper .sizes>div,
+    #productModal .modal-content .product-details .modal-info-wrapper .additives>div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     #productModal .modal-content .product-details .modal-info-wrapper>div {
         margin-bottom: 20px;
     }
@@ -275,16 +281,57 @@
         display: none;
     }
 
-    .button-label input:checked {
-        background: #D91E18;
-        color: #efefef;
+    .modal-info-wrapper .button {
+        min-width: 116px;
+        height: 46px;
+        border-radius: 100px;
     }
 
-    .button-label {
-        display: inline-block;
+    .modal-info-wrapper .button.checked {
+        background: #665F55;
+        color: #E1D4C9;
+        border: 1px solid #665F55;
+    }
+
+    .modal-info-wrapper .button {
+        background: transparent;
+        color: #403F3D;
+        border: 1px solid #C1B6AD;
+    }
+
+    .modal-info-wrapper .button {
+        display: flex;
         cursor: pointer;
-        padding: 0em 1em 3px;
-        margin: 0.25em;
+        padding: 7px 10px 7px 5px;
+        margin: 0 8px 8px 0;
+    }
+
+    .modal-info-wrapper .button .key {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: #C1B6AD;
+        color: #403F3D;
+        padding-top: 2px;
+    }
+
+    .modal-info-wrapper .total-price {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-info-wrapper .total-price>div {
+        width: 50%;
+    }
+
+    .modal-info-wrapper .button .select-option {
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+
+    .total-price>div:nth-child(2) {
+        text-align: right;
     }
 }
 

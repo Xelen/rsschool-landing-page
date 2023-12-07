@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="description">${productDescription}</div>
             ${productSizes ? productSizes.outerHTML : ''}
             ${productAdditives ? productAdditives.outerHTML : ''}
-            <div class="total-price">Total Price: $${productBasePrice.toFixed(2)}</div>
+            <div class="total-price"><div><h3>Total:</h3></div><div><h3>$${productBasePrice.toFixed(2)}</h3></div></div>
+            <div class="info">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</div>
             <span class="close">&times;</span>
             </div>
         </div>
@@ -132,7 +133,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // display updated total price
         const totalPriceElement = modalContent.querySelector('.total-price');
         if (totalPriceElement) {
-            totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+            totalPriceElement.innerHTML = `
+            <div><h3>Total:</h3></div>
+            <div><h3>$${totalPrice.toFixed(2)}</h3>
+        </div>`;
         }
     }
 
