@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     burger.addEventListener('click', () => {
         toggleMenu();
-        // scroll to top when menu is opened
+        // scroll to top - menu is opened
         if (burger.classList.contains('burger-active')) {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -40,3 +40,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// отступ для #top-menu
+window.addEventListener('resize', () => {
+    const topmenu = document.querySelector('#top-menu');
+    const offset = 90;
+    topmenu.style.top = offset + 'px';
+});
+
+// apply indentation when page loads
+window.dispatchEvent(new Event('resize'));
+
+// scroll styles
+const menuContent = document.querySelector('#top-menu');
+if (menuContent) {
+    menuContent.style.maxHeight = 'calc(100vh - 90px)'; // indentation
+    menuContent.style.overflowY = 'auto';
+}

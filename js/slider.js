@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextBtn = document.getElementById('nextBtn');
 
     let currentIndex = 0;
-    const intervalDuration = 5000;
-    let intervalId;
+    const intervalDuration = 7000; // Интервал в миллисекундах (7 секунд)
+    let intervalId; // Хранит идентификатор интервала
     let touchStartX = 0;
     let touchEndX = 0;
     let isSwiping = false;
+    let lastSwipeTime = 0;
+    let timeSinceLastSwipe = 0;
 
     function showImage(index) {
         const translateValue = -index * 100 + '%';
@@ -27,7 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function startCarousel() {
-        intervalId = setInterval(nextImage, intervalDuration);
+        intervalId = setInterval(() => {
+            if (!isSwiping) {
+                nextImage();
+            }
+            timeSinceLastSwipe += intervalDuration;
+            if (timeSinceLastSwipe >= intervalDuration) {
+                timeSinceLastSwipe = 0;
+            }
+        }, intervalDuration);
     }
 
     function stopCarousel() {
@@ -37,17 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleTouchStart(event) {
         touchStartX = event.touches[0].clientX;
         isSwiping = true;
+        lastSwipeTime = Date.now();
     }
 
     function handleTouchMove(event) {
         if (!isSwiping) return;
         touchEndX = event.touches[0].clientX;
+        event.preventDefault(); // Предотвращаем прокрутку страницы
     }
 
     function handleTouchEnd() {
         if (!isSwiping) return;
 
         const swipeDistance = touchStartX - touchEndX;
+        const elapsedTime = Date.now() - lastSwipeTime;
 
         if (Math.abs(swipeDistance) > 50) {
             if (swipeDistance > 0) {
@@ -58,17 +71,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         isSwiping = false;
+
+        // Устанавливаем таймер для автоматической прокрутки
+        const remainingTime = intervalDuration - elapsedTime;
+        if (remainingTime > 0) {
+            setTimeout(startCarousel, remainingTime);
+        } else {
+            startCarousel();
+        }
     }
 
     nextBtn.addEventListener('click', function () {
         nextImage();
         stopCarousel();
+        timeSinceLastSwipe = 0; // Сбрасываем время после кнопки
         startCarousel();
     });
 
     prevBtn.addEventListener('click', function () {
         prevImage();
         stopCarousel();
+        timeSinceLastSwipe = 0; // Сбрасываем время после кнопки
         startCarousel();
     });
 
@@ -78,5 +101,5 @@ document.addEventListener('DOMContentLoaded', function () {
     carousel.addEventListener('touchmove', handleTouchMove);
     carousel.addEventListener('touchend', handleTouchEnd);
 
-    startCarousel();
+    startCarousel(); // Запускаем автоматическую прокрутку при загрузке страницы
 });
