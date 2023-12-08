@@ -2,20 +2,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('image-carousel');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const progressBarItems = document.querySelectorAll('.bar-item .line');
 
     let currentIndex = 0;
-    const intervalDuration = 7000; // Интервал в миллисекундах (7 секунд)
-    let intervalId; // Хранит идентификатор интервала
+    const intervalDuration = 5000;
+    let intervalId;
     let touchStartX = 0;
     let touchEndX = 0;
     let isSwiping = false;
     let lastSwipeTime = 0;
     let timeSinceLastSwipe = 0;
+    let autoplayEnabled = true;
 
     function showImage(index) {
         const translateValue = -index * 100 + '%';
         carousel.style.transition = 'transform 0.5s ease-in-out';
         carousel.style.transform = 'translateX(' + translateValue + ')';
+        updateProgressBar(index);
+        startProgressBarAnimation();
     }
 
     function nextImage() {
@@ -29,19 +33,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function startCarousel() {
-        intervalId = setInterval(() => {
-            if (!isSwiping) {
-                nextImage();
-            }
-            timeSinceLastSwipe += intervalDuration;
-            if (timeSinceLastSwipe >= intervalDuration) {
-                timeSinceLastSwipe = 0;
-            }
-        }, intervalDuration);
+        if (!carousel.getAttribute('data-carousel-initialized')) {
+            // add animation for the first progress bar
+            progressBarItems[0].style.transition = 'width 5s linear';
+            progressBarItems[0].style.width = '100%';
+            carousel.setAttribute('data-carousel-initialized', 'true');
+        }
+
+        if (autoplayEnabled) {
+            intervalId = setInterval(() => {
+                if (!isSwiping) {
+                    nextImage();
+                }
+                timeSinceLastSwipe += intervalDuration;
+                if (timeSinceLastSwipe >= intervalDuration) {
+                    timeSinceLastSwipe = 0;
+                }
+            }, intervalDuration);
+        }
     }
 
     function stopCarousel() {
         clearInterval(intervalId);
+        lastSwipeTime = Date.now();
+        timeSinceLastSwipe = 0;
     }
 
     function handleTouchStart(event) {
@@ -53,14 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleTouchMove(event) {
         if (!isSwiping) return;
         touchEndX = event.touches[0].clientX;
-        event.preventDefault(); // Предотвращаем прокрутку страницы
+        event.preventDefault();
     }
 
     function handleTouchEnd() {
         if (!isSwiping) return;
 
         const swipeDistance = touchStartX - touchEndX;
-        const elapsedTime = Date.now() - lastSwipeTime;
 
         if (Math.abs(swipeDistance) > 50) {
             if (swipeDistance > 0) {
@@ -72,34 +86,84 @@ document.addEventListener('DOMContentLoaded', function () {
 
         isSwiping = false;
 
-        // Устанавливаем таймер для автоматической прокрутки
-        const remainingTime = intervalDuration - elapsedTime;
-        if (remainingTime > 0) {
-            setTimeout(startCarousel, remainingTime);
-        } else {
-            startCarousel();
-        }
+        // stop the carousel and start it after half the animation time
+        stopCarousel();
+        setTimeout(startCarousel, intervalDuration / 2);
+    }
+
+    function updateProgressBar(index) {
+        progressBarItems.forEach((item, i) => {
+            if (i === index) {
+                item.style.width = '100%';
+            } else {
+                item.style.width = '0';
+            }
+        });
+    }
+
+    function startProgressBarAnimation() {
+        progressBarItems.forEach((item, i) => {
+            item.style.transition = 'width 0s';
+            item.style.width = '0';
+        });
+
+        // launch animation for the current progress bar
+        progressBarItems[currentIndex].style.transition = 'width 5s linear';
+        progressBarItems[currentIndex].style.width = '100%';
     }
 
     nextBtn.addEventListener('click', function () {
         nextImage();
         stopCarousel();
-        timeSinceLastSwipe = 0; // Сбрасываем время после кнопки
         startCarousel();
     });
 
     prevBtn.addEventListener('click', function () {
         prevImage();
         stopCarousel();
-        timeSinceLastSwipe = 0; // Сбрасываем время после кнопки
         startCarousel();
     });
 
-    carousel.addEventListener('mouseenter', stopCarousel);
-    carousel.addEventListener('mouseleave', startCarousel);
+    let pauseStartTime = 0;
+
+    carousel.addEventListener('mouseenter', function () {
+        stopCarousel();
+        pauseStartTime = Date.now(); // remember the start time of the pause
+        const progressBar = progressBarItems[currentIndex];
+        const computedStyle = getComputedStyle(progressBar);
+        const width = computedStyle.getPropertyValue('width');
+        progressBar.style.transition = 'none';
+        progressBar.style.width = width;
+    });
+
+    let isPausedDuringHover = false;
+
+    carousel.addEventListener('mouseenter', function () {
+        stopCarousel();
+        isPausedDuringHover = true;
+    });
+
+    carousel.addEventListener('mouseleave', function () {
+        startCarousel();
+        const progressBar = progressBarItems[currentIndex];
+
+        // if the slider was stopped while hovering, adjust the animation time
+        const remainingTime = isPausedDuringHover ? intervalDuration : intervalDuration - (Date.now() - pauseStartTime);
+
+        progressBar.style.transition = `width ${remainingTime / 1000}s linear`;
+        progressBar.style.width = '100%';
+
+        // remove the animation after completion
+        setTimeout(() => {
+            progressBar.style.transition = '';
+        }, remainingTime);
+
+        isPausedDuringHover = false;
+    });
+
     carousel.addEventListener('touchstart', handleTouchStart);
     carousel.addEventListener('touchmove', handleTouchMove);
     carousel.addEventListener('touchend', handleTouchEnd);
 
-    startCarousel(); // Запускаем автоматическую прокрутку при загрузке страницы
+    startCarousel();
 });

@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// отступ для #top-menu
+
 window.addEventListener('resize', () => {
     const topmenu = document.querySelector('#top-menu');
     const offset = 90;

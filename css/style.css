@@ -4,19 +4,19 @@
 }
 
 * {
-    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    /* remove scrollbar space */
+    width: 3px;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ff0000;
+    background: #acacac;
 }
 
 ::after,
@@ -264,11 +264,6 @@ section {
 }
 
 #enjoy {
-    /* background-image: url('../img/img-hero1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: center; */
     border-radius: 40px;
     color: #E1D4C9;
     margin-top: 2.5px;
@@ -391,18 +386,6 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.bar-item {
-    background: #C1B6AD;
-    width: 40px;
-    height: 4px;
-    margin: 0 6px;
-    border-radius: 100px;
-}
-
-.bar-item.active {
-    background: #665F55;
 }
 
 #about {

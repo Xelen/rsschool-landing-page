@@ -46,7 +46,6 @@ body.modal-open {
         display: none;
         max-height: 0;
         opacity: 0;
-        /* animation: fadeOut 1s ease-in-out; */
     }
 
     .item.ref {
@@ -154,8 +153,6 @@ body.modal-open {
 }
 
 .modal-info-wrapper .button {
-    /* min-width: 116px;
-    height: 46px; */
     border-radius: 100px;
 }
 
@@ -229,7 +226,6 @@ body.modal-open {
     border-radius: 100px;
     padding: 9px;
     margin: 0;
-    /* height: 44px; */
 }
 
 .button,
