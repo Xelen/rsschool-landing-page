@@ -67,8 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleTouchMove(event) {
         if (!isSwiping) return;
+
         touchEndX = event.touches[0].clientX;
-        event.preventDefault();
+
+        const swipeDistance = touchStartX - touchEndX;
+
+        // block page scrolling only if the swipe inside the slider
+        if (Math.abs(swipeDistance) > 10) {
+            event.preventDefault();
+        }
     }
 
     function handleTouchEnd() {
@@ -86,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         isSwiping = false;
 
-        // stop the carousel and start it after half the animation time
+        // stop the carousel and reset the interval
         stopCarousel();
-        setTimeout(startCarousel, intervalDuration / 2);
+        startCarousel();
     }
 
     function updateProgressBar(index) {

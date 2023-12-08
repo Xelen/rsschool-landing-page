@@ -14,7 +14,8 @@
 }
 
 .carousel-item {
-    min-width: 480px;
+    /* min-width: 480px; */
+    min-width: 100%;
 }
 
 .bar-item {

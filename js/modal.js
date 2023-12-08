@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // display modal
         modal.style.display = 'block';
 
+
         // body scrolling off
         document.body.classList.add('modal-open');
 
@@ -144,10 +145,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const modal = document.getElementById('productModal');
         const modalContent = modal.querySelector('.modal-content');
 
+        // fade-out effect
+        modal.style.transition = 'opacity 0.3s ease-in-out';
+        modal.style.opacity = '0';
+
+        // hide the modal and reset styles
+        setTimeout(function () {
+            modal.style.display = 'none';
+            modal.style.transition = '';
+            modal.style.opacity = '';
+            modalContent.innerHTML = '';
+        }, 500);
+
         // body scrolling on
         document.body.classList.remove('modal-open');
-
-        modal.style.display = 'none';
-        modalContent.innerHTML = '';
     }
+
 });
