@@ -74,11 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     const refProducts = document.querySelectorAll(`.menu-block-${selectedCategory} .item.ref`);
                     const areRefProductsHidden = Array.from(refProducts).every(refProduct => refProduct.classList.contains('hidden'));
                     const refreshIconBlock = document.querySelector(`.menu-block-${selectedCategory} .refresh-icon`);
-
-                    if (areRefProductsHidden) {
-                        refreshIconBlock.style.display = 'inherit';
-                    } else {
-                        refreshIconBlock.style.display = 'none';
+                    if (refreshIconBlock) {
+                        if (areRefProductsHidden) {
+                            refreshIconBlock.style.display = 'inherit';
+                        } else {
+                            refreshIconBlock.style.display = 'none';
+                        }
                     }
 
                 });
