@@ -128,6 +128,11 @@
         transform: scale(1.055);
     }
 
+    .nav-next,
+    .nav-prev {
+        top: 55%;
+    }
+
     .coffe-icon.dmenu {
         display: none;
     }

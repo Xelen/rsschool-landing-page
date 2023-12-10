@@ -309,7 +309,11 @@ section {
 
 #favorite-coffee .carousel-item {
     max-width: 480px;
-    margin: 0 auto 40px;
+    margin: 0 auto 24px;
+}
+
+h2.mobile {
+    margin: 0 0 40px 0;
 }
 
 #favorite-coffee .carousel-item .img img {
@@ -333,8 +337,7 @@ section {
 .nav-next,
 .nav-prev {
     display: flex;
-    top: 46.7%;
-    transform: translateY(-50%);
+    top: 50.5%;
     position: absolute;
     transition: background 0.6s ease-in-out, border 0.6s ease-in-out;
     cursor: pointer;
