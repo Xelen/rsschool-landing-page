@@ -35,11 +35,11 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(function () {
                 window.location = item.href;
             }, 500);
+            // Body scroll on
             document.body.style.overflow = '';
             burger.classList.remove('burger-active');
             topmenu.classList.remove('topmenu-active');
 
-            // Body scroll on
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
