@@ -882,13 +882,13 @@ h1.menu-title {
 
 #top-menu ul>li.mlink {
     padding: 0 0 3px 0;
-    margin: 41px 0 0 !important;
+    margin: 43px 0 0 !important;
 }
 
 .mlink .coffe-icon {
     position: relative;
     left: -12px;
-    top: 7px;
+    top: 9px;
 }
 
 .menu-btn.mlink::after {

@@ -14,7 +14,7 @@ body.modal-open {
 
 .modal-content {
     position: absolute;
-    top: 54.8%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fefefe;
@@ -213,7 +213,7 @@ body.modal-open {
 }
 
 .modal-info-wrapper .caption {
-    padding: 12px 12px 12px 24px;
+    padding: 12px 0px 12px 24px;
     border-top: 1px solid #C1B6AD;
     background-image: url('../icons/info.svg');
     background-repeat: no-repeat;
