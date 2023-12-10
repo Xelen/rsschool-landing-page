@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let isSwiping = false;
     let lastSwipeTime = 0;
     let timeSinceLastSwipe = 0;
-    let autoplayEnabled = false;
+    let autoplayEnabled = true;
 
     function showImage(index) {
         const translateValue = -index * 100 + '%';
