@@ -29,13 +29,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    topMenuItem.forEach(item => {
-        item.addEventListener('click', () => {
+    topMenuItemLink.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            setTimeout(function () {
+                window.location = item.href;
+            }, 500);
+            document.body.style.overflow = '';
             burger.classList.remove('burger-active');
             topmenu.classList.remove('topmenu-active');
 
             // Body scroll on
-            document.body.style.overflow = '';
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
