@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // radio button or checkbox
         if (target.type === 'radio' || target.type === 'checkbox') {
-            updatePrice(target);
+            // Check if updatePrice is defined
+            if (typeof updatePrice === 'function') {
+                updatePrice(target);
+            } else {
+                console.log('updatePrice is not defined. Skipping update.');
+            }
         }
     });
 

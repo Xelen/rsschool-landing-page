@@ -118,8 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    function updatePrice(selectedElement) {
+    window.updatePrice = function (selectedElement) {
         const productCard = selectedElement.closest('.item');
+
+        // check if productCard is null
+        if (!productCard) {
+            return;
+        }
 
         let basePrice = parseFloat(productCard.dataset.price);
 
