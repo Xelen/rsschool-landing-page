@@ -211,7 +211,7 @@
         border-radius: 50px;
         cursor: pointer;
         position: relative;
-        top: 1px;
+        top: 2px;
     }
 
     .burger-btn {
@@ -220,7 +220,7 @@
         display: block;
         position: absolute;
         top: 39%;
-        left: 30%;
+        left: 29%;
     }
 
     header .inner {

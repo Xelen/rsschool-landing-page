@@ -168,9 +168,65 @@ document.addEventListener('DOMContentLoaded', function () {
         isPausedDuringHover = false;
     });
 
-    carousel.addEventListener('touchstart', handleTouchStart);
-    carousel.addEventListener('touchmove', handleTouchMove);
-    carousel.addEventListener('touchend', handleTouchEnd);
+    function pauseCarousel() {
+        clearInterval(intervalId);
+        pauseStartTime = Date.now();
+
+        const progressBar = progressBarItems[currentIndex];
+        const computedStyle = getComputedStyle(progressBar);
+        const width = parseFloat(computedStyle.width, 10);
+        progressBar.style.transition = 'none';
+        progressBar.style.width = width + 'px';
+    }
+
+    function resumeCarousel() {
+        const progressBar = progressBarItems[currentIndex];
+        const computedStyle = getComputedStyle(progressBar);
+        const width = parseFloat(computedStyle.width, 10);
+        const remainingTime = intervalDuration - (width / carousel.offsetWidth) * intervalDuration;
+
+        progressBar.style.transition = `width ${remainingTime}ms linear`;
+        progressBar.style.width = '100%';
+
+        intervalId = setTimeout(() => {
+            nextImage();
+            startCarousel();
+        }, remainingTime);
+    }
+    carousel.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+    }, { passive: false });
+
+    carousel.addEventListener('touchstart', function (event) {
+        touchStartX = event.touches[0].clientX;
+        isSwiping = false;
+        pauseCarousel();
+    }, { passive: true });
+
+    carousel.addEventListener('touchmove', function (event) {
+        touchEndX = event.touches[0].clientX;
+        const swipeDistance = touchStartX - touchEndX;
+
+        if (Math.abs(swipeDistance) > 10) {
+            isSwiping = true;
+        }
+    });
+
+    carousel.addEventListener('touchend', function () {
+        if (isSwiping) {
+            const swipeDistance = touchStartX - touchEndX;
+            if (Math.abs(swipeDistance) > 50) {
+                if (swipeDistance > 0) {
+                    nextImage();
+                } else {
+                    prevImage();
+                }
+            }
+            resumeCarousel();
+        } else {
+            setTimeout(resumeCarousel, 500);
+        }
+    });
 
     startCarousel();
 });

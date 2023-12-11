@@ -61,7 +61,16 @@
     }
 
     #top-menu.topmenu-active ul>li {
-        margin: 0 10px 39px 0;
+        margin: 0 12px 40px 0;
+    }
+
+    #top-menu.topmenu-active ul>li.mlink {
+        margin: 41px 0 0 1px !important;
+    }
+
+    .topmenu-active .mlink .coffe-icon {
+        position: relative;
+        top: 8px;
     }
 
     .burger-btn span {
