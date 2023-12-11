@@ -51,19 +51,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }
             });
-            // event listener for tab clicks
-            const tabs = document.querySelectorAll('.menu-tabs li');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
+            // event listener for tab clicks using event delegation
+            const menuTabs = document.querySelector('.menu-tabs');
+            menuTabs.addEventListener('click', function (event) {
+                const clickedTab = event.target.closest('li');
 
+                if (clickedTab && menuTabs.contains(clickedTab)) {
+                    const tabs = document.querySelectorAll('.menu-tabs li');
                     tabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
+                    clickedTab.classList.add('active');
 
-                    // show products for selected category
-                    const selectedCategory = this.textContent.toLowerCase();
+                    const selectedCategory = clickedTab.textContent.toLowerCase();
                     showProductsForCategory(selectedCategory);
 
-                    // hide products for the previous category
                     if (visibleCategory && visibleCategory !== selectedCategory) {
                         hideProductsForCategory(visibleCategory);
                     }
@@ -74,18 +74,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     const refProducts = document.querySelectorAll(`.menu-block-${selectedCategory} .item.ref`);
                     const areRefProductsHidden = Array.from(refProducts).every(refProduct => refProduct.classList.contains('hidden'));
                     const refreshIconBlock = document.querySelector(`.menu-block-${selectedCategory} .refresh-icon`);
-                    if (refreshIconBlock) {
-                        if (areRefProductsHidden) {
-                            refreshIconBlock.style.display = 'inherit';
-                        } else {
-                            refreshIconBlock.style.display = 'none';
-                        }
-                    }
 
-                });
+                    if (refreshIconBlock) {
+                        refreshIconBlock.style.display = areRefProductsHidden ? 'inherit' : 'none';
+                    }
+                }
             });
 
-            tabs[0].click();
+            document.querySelector('.menu-tabs li').click();
+
         })
         .catch(error => console.error('Error fetching products:', error));
     // hide products for a specific category
