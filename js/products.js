@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     let visibleCategory = null;
 
+    function handleScreenResize() {
+        const screenWidth = window.innerWidth;
+
+
+        if (screenWidth < 769) {
+            hideRefProducts(visibleCategory);
+            showRefreshIcon(visibleCategory);
+        } else {
+            showRefProducts(visibleCategory);
+            hideRefreshIcon(visibleCategory);
+        }
+    }
+
+    window.addEventListener('resize', handleScreenResize);
+
     // fetch products from JSON
     fetch('products.json')
         .then(response => response.json())
@@ -79,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         refreshIconBlock.style.display = areRefProductsHidden ? 'inherit' : 'none';
                     }
                 }
+                handleScreenResize();
             });
 
             document.querySelector('.menu-tabs li').click();
@@ -216,4 +232,35 @@ document.addEventListener('DOMContentLoaded', function () {
             refProduct.classList.toggle('hidden');
         });
     }
+
+    function showRefreshIcon(category) {
+        const refreshIconBlock = document.querySelector(`.menu-block-${category} .refresh-icon`);
+        if (refreshIconBlock) {
+            refreshIconBlock.style.display = 'block';
+        }
+    }
+
+
+    function hideRefreshIcon(category) {
+        const refreshIconBlock = document.querySelector(`.menu-block-${category} .refresh-icon`);
+        if (refreshIconBlock) {
+            refreshIconBlock.style.display = 'none';
+        }
+    }
+
+    function showRefProducts(category) {
+        const refProducts = document.querySelectorAll(`.menu-block-${category} .item.ref`);
+        refProducts.forEach(refProduct => {
+            refProduct.classList.remove('hidden');
+        });
+    }
+
+    // Скрыть элементы с классом "ref" для конкретной категории
+    function hideRefProducts(category) {
+        const refProducts = document.querySelectorAll(`.menu-block-${category} .item.ref`);
+        refProducts.forEach(refProduct => {
+            refProduct.classList.add('hidden');
+        });
+    }
+
 });

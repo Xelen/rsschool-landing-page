@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const firstSizeParent = firstSizeRadioInput.parentElement;
                 firstSizeParent.classList.add('checked');
             }
+
         }
 
         // display modal
