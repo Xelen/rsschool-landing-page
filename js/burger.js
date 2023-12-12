@@ -43,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
+
 });
 
 window.addEventListener('resize', () => {
