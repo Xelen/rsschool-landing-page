@@ -653,6 +653,12 @@ footer .footer-contacts ul li svg {
     margin-bottom: 80px;
 }
 
+#enjoy .overlay {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+
 #menu h2 {
     max-width: 800px;
     margin: 2px auto 40px;
