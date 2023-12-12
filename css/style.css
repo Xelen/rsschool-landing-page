@@ -656,7 +656,7 @@ footer .footer-contacts ul li svg {
 #enjoy .overlay {
     position: relative;
     width: 100%;
-    z-index: 999;
+    z-index: 2;
 }
 
 #menu h2 {
