@@ -43,6 +43,18 @@ window.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
+    const nonActiveMenuItems = document.querySelectorAll('.noneactive');
+
+    nonActiveMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Закрытие меню
+            document.body.style.overflow = '';
+            burger.classList.remove('burger-active');
+            topmenu.classList.remove('topmenu-active');
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
 
 });
 
