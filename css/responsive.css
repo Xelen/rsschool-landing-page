@@ -14,6 +14,12 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 769px) {
+    #top-menu ul {
+        margin-left: -1px;
+    }
+}
+
 @media screen and (max-width: 720px) {
     #enjoy .promo-text {
         padding: 100px 40px 100px 40px;
@@ -173,9 +179,6 @@
         display: none;
     }
 
-    #menu .menu-block {
-        /* margin: 0 -6px; */
-    }
 
     #menu .menu-block .item.mobile-none {
         display: none;
