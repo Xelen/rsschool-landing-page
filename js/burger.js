@@ -55,7 +55,20 @@ window.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
+    const breakpoint = 768;
 
+    window.addEventListener('resize', () => {
+        const topmenu = document.querySelector('#top-menu');
+        const offset = 90;
+        topmenu.style.top = offset + 'px';
+
+
+        if (window.innerWidth > breakpoint) {
+            document.body.style.overflow = '';
+        }
+    });
+
+    window.dispatchEvent(new Event('resize'));
 });
 
 window.addEventListener('resize', () => {
