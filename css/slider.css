@@ -1,0 +1,56 @@
+.carousel-container {
+    max-width: 480px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#favorite-coffee {
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.bar-item {
+    background: #C1B6AD;
+    width: 40px;
+    height: 4px;
+    margin: 0 6px;
+    border-radius: 100px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.progress-bar-items {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bar-item {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.line {
+    height: 100%;
+    width: 0;
+    background-color: #665F55;
+    transition: width 1s ease;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}

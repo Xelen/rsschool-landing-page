@@ -1,0 +1,297 @@
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 63, 61, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-caption .additives,
+.img-caption .sizes {
+    display: none;
+}
+
+/* TABS */
+@media screen and (min-width: 769px) {
+    #menu .menu-block .item.ref {
+        opacity: 1;
+    }
+
+    .menu-block .refresh-icon {
+        display: none !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #menu .menu-block .item.ref.hidden {
+        display: none;
+        max-height: 0;
+        opacity: 0;
+    }
+
+    .item.ref {
+        overflow: hidden;
+        max-height: none;
+        height: auto;
+        opacity: 1;
+        animation: fadeInOutTabs 1s ease-in-out;
+    }
+
+}
+
+@keyframes fadeInOutTabs {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-block>div {
+    animation: fadeInOutTabs 0.5s ease-in-out;
+}
+
+#productModal .modal-content {
+    max-width: 800px;
+    border-radius: 40px;
+    background-color: #E1D4C9;
+    padding: 16px;
+    animation: fadeInOutTabs 0.5s ease-in-out;
+}
+
+#productModal .modal-content .product-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper {
+    max-width: 458px;
+}
+
+#productModal .modal-content .product-details .image {
+    overflow: hidden;
+    border-radius: 40px;
+    height: 310px;
+    width: 310px;
+}
+
+#productModal .modal-content .product-details .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    transform: scale(1.1);
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper {
+    padding-left: 20px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .name h3 {
+    margin-bottom: 11px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .sizes p,
+#productModal .modal-content .product-details .modal-info-wrapper .additives p {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .sizes>div,
+#productModal .modal-content .product-details .modal-info-wrapper .additives>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#productModal .modal-content .product-details .modal-info-wrapper .description {
+    margin-bottom: 20px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .sizes {
+    margin-bottom: 12px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .additives {
+    margin-bottom: 12px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .total-price {
+    margin-bottom: 19px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper .caption {
+    margin-bottom: 19px;
+}
+
+#productModal .modal-content .product-details .modal-info-wrapper>div:last-child {
+    margin-bottom: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-info-wrapper .button {
+    border-radius: 100px;
+}
+
+.modal-info-wrapper .button.checked {
+    background: #665F55;
+    color: #E1D4C9;
+    border: 1px solid #665F55;
+}
+
+.modal-info-wrapper .button.checked .key {
+    background: #E1D4C9;
+}
+
+.modal-info-wrapper .button {
+    background: transparent;
+    color: #403F3D;
+    border: 1px solid #C1B6AD;
+}
+
+.modal-info-wrapper .button {
+    display: flex;
+    cursor: pointer;
+    padding: 7px 15px 7px 7px;
+    margin: 0 8px 8px 0;
+}
+
+.modal-info-wrapper .button .key {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #C1B6AD;
+    color: #403F3D;
+    padding-top: 2px;
+}
+
+.modal-info-wrapper .total-price {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-info-wrapper .total-price>div {
+    width: 50%;
+}
+
+.modal-info-wrapper .button .select-option {
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+.modal-info-wrapper .total-price>div:nth-child(2) {
+    text-align: right;
+}
+
+.modal-info-wrapper .total-price h3 {
+    margin: 0;
+}
+
+.modal-info-wrapper .caption {
+    padding: 12px 0px 12px 24px;
+    border-top: 1px solid #C1B6AD;
+    background-image: url('../icons/info.svg');
+    background-repeat: no-repeat;
+    background-position: 0 12px;
+}
+
+.modal-info-wrapper .close.button {
+    display: block;
+    text-align: center;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    padding: 9px;
+    margin: 0;
+}
+
+.button,
+.button:hover {
+    transition: background 0.5s ease-in-out, border 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+@media (hover: hover) {
+    .modal-info-wrapper .button:hover {
+        background: #665F55;
+        color: #E1D4C9;
+        border: 1px solid #665F55;
+    }
+
+    .modal-info-wrapper .button:hover .key {
+        background: #E1D4C9;
+    }
+
+    #productModal .modal-content .product-details .image:hover img {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #productModal .modal-content {
+        max-width: 688px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        max-width: 346px;
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    #productModal .modal-content {
+        max-width: 400px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        max-width: 368px;
+        padding-left: 0px;
+    }
+
+    #productModal .modal-content .product-details .image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #productModal .modal-content {
+        max-width: 342px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        max-width: 310px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #productModal .modal-content {
+        max-width: 332px;
+    }
+
+    #productModal .modal-content .product-details .modal-info-wrapper {
+        max-width: 300px;
+    }
+}

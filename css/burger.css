@@ -1,0 +1,96 @@
+@media screen and (max-width: 768px) {
+    #top-menu {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #top-menu.topmenu-active {
+        opacity: 1;
+    }
+
+    #top-menu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 90px;
+        left: 100%;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: #E1D4C9;
+        transition: .6s all;
+        z-index: 5;
+        overflow-y: scroll;
+    }
+
+    #top-menu.topmenu-active {
+        left: 0;
+        width: 100%;
+    }
+
+    #top-menu>ul {
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top-menu.topmenu-active #menu-link {
+        display: inherit;
+        justify-content: center;
+        flex-basis: auto;
+        margin: 41px 0 0 0;
+    }
+
+    #top-menu.topmenu-active #menu-link .cup-text {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+        left: -11px;
+    }
+
+    #top-menu ul {
+        padding: 25px 0 26px 12px;
+    }
+
+    #top-menu.topmenu-active #menu-link .coffe-icon {
+        top: -1px;
+        margin-left: 5px;
+    }
+
+    #top-menu.topmenu-active ul>li {
+        margin: 0 12px 40px 0;
+    }
+
+    #top-menu.topmenu-active ul>li.mlink {
+        margin: 41px 0 0 1px !important;
+    }
+
+    .topmenu-active .mlink .coffe-icon {
+        position: relative;
+        top: 8px;
+    }
+
+    .burger-btn span {
+        transition: .5s all;
+    }
+
+    .burger-active .burger-btn span:nth-child(1),
+    .burger-active .burger-btn span:nth-child(2) {
+        margin-bottom: -2px;
+    }
+
+    .burger-active span:nth-child(1) {
+        transform: translateY(5px) rotate(-45deg);
+        transition: .5s all;
+        height: 2px
+    }
+
+    .burger-active span:nth-child(2) {
+        transform: translateY(5px) rotate(45deg);
+        transition: .5s all;
+        height: 2px
+    }
+}
