@@ -175,12 +175,12 @@ button,
     color 0.3s ease;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   .theme-toggle:hover {
     background-color: var(--color-surface);
     color: var(--color-on-surface);
   }
-}
+} */
 
 .theme-toggle:focus-visible {
   outline: 2px solid var(--color-accent);
