@@ -159,13 +159,13 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 44px;
-  width: 44px;
-  height: 44px;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   background-color: transparent;
-  border: 1px solid var(--color-surface);
   border-radius: 50%;
+  border: none;
   color: var(--color-text);
   font-size: 20px;
   line-height: 1;
@@ -961,4 +961,13 @@ h1.menu-title {
 
 .progress-bar .bar-item.active {
   cursor: default;
+}
+
+.button-primary .coffe-icon svg {
+  position: relative;
+  top: 10px;
+}
+
+#top-menu ul {
+  padding: 0;
 }
